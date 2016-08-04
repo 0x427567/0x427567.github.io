@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.0x427567.com/"/>
-  <updated>2016-08-04T16:30:01.000Z</updated>
+  <updated>2016-08-04T16:35:17.000Z</updated>
   <id>https://blog.0x427567.com/</id>
   
   <author>
@@ -20,10 +20,10 @@
     <link href="https://blog.0x427567.com/2016/08/04/Using-Hexo-to-build-a-blog-at-GitHub/"/>
     <id>https://blog.0x427567.com/2016/08/04/Using-Hexo-to-build-a-blog-at-GitHub/</id>
     <published>2016-08-04T13:08:58.000Z</published>
-    <updated>2016-08-04T16:30:01.000Z</updated>
+    <updated>2016-08-04T16:35:17.000Z</updated>
     
     <content type="html"><![CDATA[<p>Hexo is a fast, simple and powerful blog framework, it’s powered by Node.js, you can deploy your blog to <a href="https://pages.github.com/" title="GitHub Pages" target="_blank" rel="external">GitHub Pages</a>.</p>
-<h2 id="Create-a-new-repository-for-blog"><a href="#Create-a-new-repository-for-blog" class="headerlink" title="Create a new repository for blog"></a>Create a new repository for blog</h2><p>First thing first, you need create a repository for blog, but this step is not point in this article, please read detail at GitHub Pages.</p>
+<h2 id="Create-a-new-repository-for-blog"><a href="#Create-a-new-repository-for-blog" class="headerlink" title="Create a new repository for blog"></a>Create a new repository for blog</h2><p>First thing first, you need create a repository for blog, but this step is not point in this article, please read detail at GitHub Pages.<br><a id="more"></a></p>
 <h2 id="Install-Node-js"><a href="#Install-Node-js" class="headerlink" title="Install Node.js"></a>Install Node.js</h2><p>Now check Node.js is installed, if you never install Node.js, I recommended use <a href="https://github.com/creationix/nvm" title="NVM(Node Version Manager)" target="_blank" rel="external">NVM(Node Version Manager)</a></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">wget -qO- https://raw.github.com/creationix/nvm/master/install.sh | sh</div></pre></td></tr></table></figure>
 <p>When install is done, you need to restart your terminal and install Node.js.</p>
@@ -91,7 +91,6 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">google_analytics: UA-XXXXXXXX-X</div></pre></td></tr></table></figure>
 <h2 id="Deploy-your-blog-to-GitHub"><a href="#Deploy-your-blog-to-GitHub" class="headerlink" title="Deploy your blog to GitHub"></a>Deploy your blog to GitHub</h2><p>Install Hexo GitHub deploy plugin</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install --save hexo-deployer-git</div></pre></td></tr></table></figure>
-<a id="more"></a>
 <p>Add settings to _config.yml.</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repo: https://github.com/user/repo</div><div class="line">  branch: master / gh-pg</div></pre></td></tr></table></figure>
 <p>Last step!</p>
@@ -102,74 +101,7 @@
     <summary type="html">
     
       &lt;p&gt;Hexo is a fast, simple and powerful blog framework, it’s powered by Node.js, you can deploy your blog to &lt;a href=&quot;https://pages.github.com/&quot; title=&quot;GitHub Pages&quot;&gt;GitHub Pages&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id=&quot;Create-a-new-repository-for-blog&quot;&gt;&lt;a href=&quot;#Create-a-new-repository-for-blog&quot; class=&quot;headerlink&quot; title=&quot;Create a new repository for blog&quot;&gt;&lt;/a&gt;Create a new repository for blog&lt;/h2&gt;&lt;p&gt;First thing first, you need create a repository for blog, but this step is not point in this article, please read detail at GitHub Pages.&lt;/p&gt;
-&lt;h2 id=&quot;Install-Node-js&quot;&gt;&lt;a href=&quot;#Install-Node-js&quot; class=&quot;headerlink&quot; title=&quot;Install Node.js&quot;&gt;&lt;/a&gt;Install Node.js&lt;/h2&gt;&lt;p&gt;Now check Node.js is installed, if you never install Node.js, I recommended use &lt;a href=&quot;https://github.com/creationix/nvm&quot; title=&quot;NVM(Node Version Manager)&quot;&gt;NVM(Node Version Manager)&lt;/a&gt;&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;wget -qO- https://raw.github.com/creationix/nvm/master/install.sh | sh&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;When install is done, you need to restart your terminal and install Node.js.&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;nvm install stable&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h2 id=&quot;Install-Hexo&quot;&gt;&lt;a href=&quot;#Install-Hexo&quot; class=&quot;headerlink&quot; title=&quot;Install Hexo&quot;&gt;&lt;/a&gt;Install Hexo&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;npm install -g hexo-cli&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h2 id=&quot;Create-a-Hexo-project&quot;&gt;&lt;a href=&quot;#Create-a-Hexo-project&quot; class=&quot;headerlink&quot; title=&quot;Create a Hexo project&quot;&gt;&lt;/a&gt;Create a Hexo project&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;hexo init blog&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;cd blog&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;npm install&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h2 id=&quot;Setting-your-blog&quot;&gt;&lt;a href=&quot;#Setting-your-blog&quot; class=&quot;headerlink&quot; title=&quot;Setting your blog&quot;&gt;&lt;/a&gt;Setting your blog&lt;/h2&gt;&lt;p&gt;Modify &lt;strong&gt;_config.yml&lt;/strong&gt; to setting your blog.&lt;/p&gt;
-&lt;h3 id=&quot;Site&quot;&gt;&lt;a href=&quot;#Site&quot; class=&quot;headerlink&quot; title=&quot;Site&quot;&gt;&lt;/a&gt;Site&lt;/h3&gt;&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Setting&lt;/th&gt;
-&lt;th&gt;Description&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;title&lt;/td&gt;
-&lt;td&gt;Blog title&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;subtitle&lt;/td&gt;
-&lt;td&gt;Blog subtitle&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;description&lt;/td&gt;
-&lt;td&gt;Blog description&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;author&lt;/td&gt;
-&lt;td&gt;Your name&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;language&lt;/td&gt;
-&lt;td&gt;Display language&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h3 id=&quot;URL&quot;&gt;&lt;a href=&quot;#URL&quot; class=&quot;headerlink&quot; title=&quot;URL&quot;&gt;&lt;/a&gt;URL&lt;/h3&gt;&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Setting&lt;/th&gt;
-&lt;th&gt;Description&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;url&lt;/td&gt;
-&lt;td&gt;Blog url&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;root&lt;/td&gt;
-&lt;td&gt;The root directory of your blog&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h2 id=&quot;Setting-custom-domain&quot;&gt;&lt;a href=&quot;#Setting-custom-domain&quot; class=&quot;headerlink&quot; title=&quot;Setting custom domain&quot;&gt;&lt;/a&gt;Setting custom domain&lt;/h2&gt;&lt;p&gt;If you do not need use custom domain then skip this section else you &lt;strong&gt;MUST&lt;/strong&gt; add this file in source.&lt;/p&gt;
-&lt;p&gt;Create a file named CNAME in source and edit it, write down your custom domain and save the file.&lt;/p&gt;
-&lt;p&gt;For example:&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;// CNAME file&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;blog.0x427567.com&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h2 id=&quot;Add-Atom-feed&quot;&gt;&lt;a href=&quot;#Add-Atom-feed&quot; class=&quot;headerlink&quot; title=&quot;Add Atom feed&quot;&gt;&lt;/a&gt;Add Atom feed&lt;/h2&gt;&lt;p&gt;Install hexo atom plugin&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;npm install --save hexo-generator-feed&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;Edit &lt;strong&gt;_config.yml&lt;/strong&gt; and add below options.&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;feed:&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  type: atom&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  path: atom.xml&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  limit: 20&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h2 id=&quot;Add-google-analytics&quot;&gt;&lt;a href=&quot;#Add-google-analytics&quot; class=&quot;headerlink&quot; title=&quot;Add google analytics&quot;&gt;&lt;/a&gt;Add google analytics&lt;/h2&gt;&lt;p&gt;Edit &lt;strong&gt;_config.yml&lt;/strong&gt; in themes/landscape and modify &lt;strong&gt;google_analytics&lt;/strong&gt;.&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;google_analytics: UA-XXXXXXXX-X&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h2 id=&quot;Deploy-your-blog-to-GitHub&quot;&gt;&lt;a href=&quot;#Deploy-your-blog-to-GitHub&quot; class=&quot;headerlink&quot; title=&quot;Deploy your blog to GitHub&quot;&gt;&lt;/a&gt;Deploy your blog to GitHub&lt;/h2&gt;&lt;p&gt;Install Hexo GitHub deploy plugin&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;npm install --save hexo-deployer-git&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;Create-a-new-repository-for-blog&quot;&gt;&lt;a href=&quot;#Create-a-new-repository-for-blog&quot; class=&quot;headerlink&quot; title=&quot;Create a new repository for blog&quot;&gt;&lt;/a&gt;Create a new repository for blog&lt;/h2&gt;&lt;p&gt;First thing first, you need create a repository for blog, but this step is not point in this article, please read detail at GitHub Pages.&lt;br&gt;
     
     </summary>
     
