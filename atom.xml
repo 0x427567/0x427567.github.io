@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.0x427567.com/"/>
-  <updated>2016-08-04T15:11:15.000Z</updated>
+  <updated>2016-08-04T15:49:24.000Z</updated>
   <id>https://blog.0x427567.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://blog.0x427567.com/2016/08/04/Using-Hexo-to-build-a-blog-at-GitHub/"/>
     <id>https://blog.0x427567.com/2016/08/04/Using-Hexo-to-build-a-blog-at-GitHub/</id>
     <published>2016-08-04T13:08:58.000Z</published>
-    <updated>2016-08-04T15:11:15.000Z</updated>
+    <updated>2016-08-04T15:49:24.000Z</updated>
     
     <content type="html"><![CDATA[<p>Hexo is a fast, simple and powerful blog framework, it’s powered by Node.js, you can deploy your blog to <a href="https://pages.github.com/" title="GitHub Pages" target="_blank" rel="external">GitHub Pages</a>.</p>
 <h2 id="Create-a-new-repository-for-blog"><a href="#Create-a-new-repository-for-blog" class="headerlink" title="Create a new repository for blog"></a>Create a new repository for blog</h2><p>First thing first, you need create a repository for blog, but this step is not point in this article, please read detail at GitHub Pages.</p>
@@ -57,6 +57,28 @@
 </tr>
 </tbody>
 </table>
+<h3 id="URL"><a href="#URL" class="headerlink" title="URL"></a>URL</h3><table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>url</td>
+<td>Blog url</td>
+</tr>
+<tr>
+<td>root</td>
+<td>The root directory of your blog</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Setting-custom-domain"><a href="#Setting-custom-domain" class="headerlink" title="Setting custom domain"></a>Setting custom domain</h2><p>If you do not need use custom domain then skip this section else you <strong>MUST</strong> add this file in source.</p>
+<p>Create a file named CNAME in source and edit it, write down your custom domain and save the file.</p>
+<p>For example:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">// CNAME file</div><div class="line">blog.0x427567.com</div></pre></td></tr></table></figure>
 ]]></content>
     
     <summary type="html">
