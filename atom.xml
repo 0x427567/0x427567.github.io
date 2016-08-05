@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.0x427567.com/"/>
-  <updated>2016-08-05T06:31:51.000Z</updated>
+  <updated>2016-08-05T09:01:53.000Z</updated>
   <id>https://blog.0x427567.com/</id>
   
   <author>
@@ -14,6 +14,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Uptime Robot - Free monitoring your server</title>
+    <link href="https://blog.0x427567.com/2016/08/05/Uptime-Robot-Free-monitoring-your-server/"/>
+    <id>https://blog.0x427567.com/2016/08/05/Uptime-Robot-Free-monitoring-your-server/</id>
+    <published>2016-08-05T08:10:20.000Z</published>
+    <updated>2016-08-05T09:01:53.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Do you need to know your website or server still alive from internet? Uptime Robot will help you to monitoring your server from internet and it is free! For free user, Uptime Robot provide 50 monitors and check it every 5 minutes, you can upgrade your account to pro plan then you can monitoring every 30 seconds.<br><a id="more"></a><br>Uptime Robot looks perfect! hmm! I think it’s great but not perfect. First it is not provide single location check, for example, the world only Japan can not connect to your server, but Uptime Robot still tell you all thing is ok, you do not know your customer is on fire.</p>
+<p>Second, sometime monitor will broken and not come back again, I need delete this monitor and create a new monitor again, all history log and data will gone.</p>
+<p>Uptime Robot<br><a href="https://uptimerobot.com/" target="_blank" rel="external">https://uptimerobot.com/</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Do you need to know your website or server still alive from internet? Uptime Robot will help you to monitoring your server from internet and it is free! For free user, Uptime Robot provide 50 monitors and check it every 5 minutes, you can upgrade your account to pro plan then you can monitoring every 30 seconds.&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="DevOps" scheme="https://blog.0x427567.com/tags/DevOps/"/>
+    
+  </entry>
   
   <entry>
     <title>How to setting Nginx proxy_pass and forward query parameters</title>
