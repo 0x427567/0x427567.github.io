@@ -3,17 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>0x427567</title>
+  <title>No tears understand callback in JavaScript | 0x427567</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="0x427567">
-<meta property="og:url" content="https://blog.0x427567.com/index.html">
+  <meta name="description" content="Callback function is useful and powerful in JavaScript, but it is confused to many people, how to use and why? Don’t worry, I will explain JavaScript callback function to you in this article.
+First, l">
+<meta property="og:type" content="article">
+<meta property="og:title" content="No tears understand callback in JavaScript">
+<meta property="og:url" content="https://blog.0x427567.com/2016/08/09/No-tears-understand-callback-in-JavaScript/index.html">
 <meta property="og:site_name" content="0x427567">
-<meta property="og:description" content="Description">
+<meta property="og:description" content="Callback function is useful and powerful in JavaScript, but it is confused to many people, how to use and why? Don’t worry, I will explain JavaScript callback function to you in this article.
+First, l">
+<meta property="og:updated_time" content="2016-08-10T06:04:36.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="0x427567">
-<meta name="twitter:description" content="Description">
+<meta name="twitter:title" content="No tears understand callback in JavaScript">
+<meta name="twitter:description" content="Callback function is useful and powerful in JavaScript, but it is confused to many people, how to use and why? Don’t worry, I will explain JavaScript callback function to you in this article.
+First, l">
   
     <link rel="alternate" href="/atom.xml" title="0x427567" type="application/atom+xml">
   
@@ -80,9 +84,7 @@ ga('send', 'pageview');
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-No-tears-understand-callback-in-JavaScript" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-No-tears-understand-callback-in-JavaScript" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2016/08/09/No-tears-understand-callback-in-JavaScript/" class="article-date">
   <time datetime="2016-08-09T09:07:34.000Z" itemprop="datePublished">2016-08-09</time>
@@ -95,8 +97,8 @@ ga('send', 'pageview');
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/08/09/No-tears-understand-callback-in-JavaScript/">No tears understand callback in JavaScript</a>
+    <h1 class="article-title" itemprop="name">
+      No tears understand callback in JavaScript
     </h1>
   
 
@@ -107,11 +109,12 @@ ga('send', 'pageview');
         <p>Callback function is useful and powerful in JavaScript, but it is confused to many people, how to use and why? Don’t worry, I will explain JavaScript callback function to you in this article.</p>
 <p>First, let’s look sample code in below.</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">step1</span> (<span class="params"></span>) </span>&#123;</div><div class="line">  setTimeout(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'This is step 1'</span>)</div><div class="line">  &#125;, <span class="number">3000</span>)</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">step2</span> (<span class="params"></span>) </span>&#123;</div><div class="line">  setTimeout(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'This is step 2'</span>)</div><div class="line">  &#125;, <span class="number">1500</span>)</div><div class="line">&#125;</div><div class="line"></div><div class="line">step1()</div><div class="line">step2()</div><div class="line"><span class="built_in">console</span>.log(<span class="string">'This is step 3'</span>)</div></pre></td></tr></table></figure>
-        
-          <p class="article-more-link">
-            <a href="/2016/08/09/No-tears-understand-callback-in-JavaScript/#more">Read More</a>
-          </p>
-        
+<a id="more"></a>
+<p>Here I created two function named step1 and step2 and print <strong>This is step 1</strong>, <strong>This is step 2</strong> after 3 and 1.5 seconds, because JavaScript have no sleep function I used <strong>setTimeout</strong> to similar the function. Finally I call step1 and step2 function, print <strong>This is step 3</strong> in last line. OK, when run the code what result will get? you will see <strong>This is step 3</strong>, <strong>This is step 2</strong>, <strong>This is step 1</strong>. WHY? because JavaScript is a non blocking language, simply to explain, when call step1 function, JavaScript will not wait step1 function result, now, JavaScript immediately call step2 function and not wait step2 function result and print <strong>This is step 3</strong>.</p>
+<p>If I need print in sequence how should I do? Use callback! Let’s modify the code.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">step1</span> (<span class="params">callback</span>) </span>&#123;</div><div class="line">  setTimeout(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'This is step 1'</span>)</div><div class="line">    callback()</div><div class="line">  &#125;, <span class="number">3000</span>)</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">step2</span> (<span class="params">callback</span>) </span>&#123;</div><div class="line">  setTimeout(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'This is step 2'</span>)</div><div class="line">    callback()</div><div class="line">  &#125;, <span class="number">1500</span>)</div><div class="line">&#125;</div><div class="line"></div><div class="line">step1(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">  step2(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'This is step 3'</span>)</div><div class="line">  &#125;)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>What happened now? I pass a anonymous function to step1 and named callback in step1 function, this anonymous function will call step2 function when it be called, now look step1 function, after print <strong>This is step 1</strong> and call callback, it’s meaning step2 function will be called, step2 function is same to step1 function, this sample is show you how to print in sequence and how to use callback function.</p>
+
       
     </div>
     <footer class="article-footer">
@@ -123,141 +126,19 @@ ga('send', 'pageview');
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-Uptime-Robot-Free-monitoring-your-server" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/08/05/Uptime-Robot-Free-monitoring-your-server/" class="article-date">
-  <time datetime="2016-08-05T08:10:20.000Z" itemprop="datePublished">2016-08-05</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/08/05/Uptime-Robot-Free-monitoring-your-server/">Uptime Robot - Free monitoring your server</a>
-    </h1>
+    <a href="/2016/08/05/Uptime-Robot-Free-monitoring-your-server/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Ancien</strong>
+      <div class="article-nav-title">Uptime Robot - Free monitoring your server</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Do you need to know your website or server still alive from internet? Uptime Robot will help you to monitoring your server from internet and it is free! For free user, Uptime Robot provide 50 monitors and check it every 5 minutes, you can upgrade your account to pro plan then you can monitoring every 30 seconds.<br>
-        
-          <p class="article-more-link">
-            <a href="/2016/08/05/Uptime-Robot-Free-monitoring-your-server/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://blog.0x427567.com/2016/08/05/Uptime-Robot-Free-monitoring-your-server/" data-id="cirohrjil0003ggsgomj3fq1f" class="article-share-link">Partager</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DevOps/">DevOps</a></li></ul>
-
-    </footer>
-  </div>
   
 </article>
-
-
-  
-    <article id="post-How-to-setting-Nginx-proxy-pass-and-forward-query-parameters" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/08/05/How-to-setting-Nginx-proxy-pass-and-forward-query-parameters/" class="article-date">
-  <time datetime="2016-08-05T04:21:58.000Z" itemprop="datePublished">2016-08-05</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/08/05/How-to-setting-Nginx-proxy-pass-and-forward-query-parameters/">How to setting Nginx proxy_pass and forward query parameters</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Let’s see basic config of proxy_pass.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">upstream web &#123;</div><div class="line">    server 10.10.10.10;</div><div class="line">    server 10.10.10.20;</div><div class="line">&#125;</div><div class="line"></div><div class="line">server&#123;</div><div class="line">    listen 80;</div><div class="line">    server_name</div><div class="line">    location / &#123;</div><div class="line">        proxy_pass http://web/;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-        
-          <p class="article-more-link">
-            <a href="/2016/08/05/How-to-setting-Nginx-proxy-pass-and-forward-query-parameters/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://blog.0x427567.com/2016/08/05/How-to-setting-Nginx-proxy-pass-and-forward-query-parameters/" data-id="cirohrjid0001ggsggqfub0ta" class="article-share-link">Partager</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Nginx/">Nginx</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Using-Hexo-to-build-a-blog-at-GitHub" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/08/04/Using-Hexo-to-build-a-blog-at-GitHub/" class="article-date">
-  <time datetime="2016-08-04T13:08:58.000Z" itemprop="datePublished">2016-08-04</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/08/04/Using-Hexo-to-build-a-blog-at-GitHub/">Using Hexo to build a blog at GitHub</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Hexo is a fast, simple and powerful blog framework, it’s powered by Node.js, you can deploy your blog to <a href="https://pages.github.com/" title="GitHub Pages">GitHub Pages</a>.</p>
-<h2 id="Create-a-new-repository-for-blog"><a href="#Create-a-new-repository-for-blog" class="headerlink" title="Create a new repository for blog"></a>Create a new repository for blog</h2><p>First thing first, you need create a repository for blog, but this step is not point in this article, please read detail at GitHub Pages.<br>
-        
-          <p class="article-more-link">
-            <a href="/2016/08/04/Using-Hexo-to-build-a-blog-at-GitHub/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://blog.0x427567.com/2016/08/04/Using-Hexo-to-build-a-blog-at-GitHub/" data-id="cirohrjio0004ggsgtyxg675a" class="article-share-link">Partager</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/GitHub/">GitHub</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node-js/">Node.js</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 </section>
         
