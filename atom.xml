@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.0x427567.com/"/>
-  <updated>2016-08-10T06:04:36.000Z</updated>
+  <updated>2016-08-21T09:30:15.000Z</updated>
   <id>https://blog.0x427567.com/</id>
   
   <author>
@@ -14,6 +14,52 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>How to clone AWS CodeCommit repository from EC2 instance</title>
+    <link href="https://blog.0x427567.com/2016/08/13/How-to-clone-AWS-CodeCommit-repository-from-EC2-instance/"/>
+    <id>https://blog.0x427567.com/2016/08/13/How-to-clone-AWS-CodeCommit-repository-from-EC2-instance/</id>
+    <published>2016-08-13T10:36:36.000Z</published>
+    <updated>2016-08-21T09:30:15.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>CodeCommit is a git service in AWS, you can own the private repository just a small fee, if you are personal or small group will be not charged any fee in some way.</p>
+<p>Well, I will deploy my application from CodeCommit to EC2, below is my way. First I created a repository in CodeCommit.</p>
+<img src="/2016/08/13/How-to-clone-AWS-CodeCommit-repository-from-EC2-instance/Create_Repository_In_AWS_CodeCommit.png" alt="Create repository in AWS CodeCommit" title="Create repository in AWS CodeCommit">
+<p>Before create a new EC2 instance, add a new IAM role.</p>
+<img src="/2016/08/13/How-to-clone-AWS-CodeCommit-repository-from-EC2-instance/Create_New_Role_In_IAM.png" alt="Create a new role in AWS IAM} <a id=" more"=""> Now you will see this screen, click select button in **Amazon EC2**. {% asset_img Chose_Amazon_EC2.png Chose Amazon EC2" title="Create a new role in AWS IAM} <!--more--> Now you will see this screen, click select button in **Amazon EC2**. {% asset_img Chose_Amazon_EC2.png Chose Amazon EC2">
+<p>Input CodeCommit in filter and click <strong>AWSCodeCommitReadOnly</strong>.</p>
+<img src="/2016/08/13/How-to-clone-AWS-CodeCommit-repository-from-EC2-instance/Attach_CodeCommitReadOnly.png" alt="Attach AWSCodeCommitReadOnly" title="Attach AWSCodeCommitReadOnly">
+<p>Now review the IAM role, if no any problem then click <strong>Create Role</strong>.</p>
+<img src="/2016/08/13/How-to-clone-AWS-CodeCommit-repository-from-EC2-instance/Review_IAM_Role.png" alt="Review IAM Role" title="Review IAM Role">
+<p>OK, let’s check the role, you will see something like below.</p>
+<img src="/2016/08/13/How-to-clone-AWS-CodeCommit-repository-from-EC2-instance/Check_IAM_Role.png" alt="Check IAM Role" title="Check IAM Role">
+<p>Now I can create a new EC2 instance and assign a role, this step is important, do not forgot!</p>
+<img src="/2016/08/13/How-to-clone-AWS-CodeCommit-repository-from-EC2-instance/EC2_IAM_Role.png" alt="Assign a role to EC2 instance" title="Assign a role to EC2 instance">
+<p>Well done, I can start setting my EC2 instance, first thing is check AWS CLI version, CodeCommit only working with AWS CLI 1.7.38 and later, type <strong>aws –version</strong> in terminal and check the version. For Debian will needs upgrade AWS CLI version, just follow steps.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ sudo apt-get purge aws</div><div class="line">$ sudo apt-get install python-pip</div><div class="line">$ sudo pip install awscli</div></pre></td></tr></table></figure>
+<p>When done, setting git config, just two  commands.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git config --global credential.helper &apos;!aws codecommit credential-helper $@&apos;</div><div class="line">git config --global credential.UseHttpPath true</div></pre></td></tr></table></figure>
+<p>Now clone git repository from CodeCommit.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">admin@ip-10-0-129-84:~$ git clone https://git-codecommit.us-east-1.amazonaws.com/v1/repos/0x427567-Test</div><div class="line">Cloning into &apos;0x427567-Test&apos;...</div><div class="line">warning: You appear to have cloned an empty repository.</div><div class="line">Checking connectivity... done.</div></pre></td></tr></table></figure>
+<p>For now, my EC2 can direct clone repository from CodeCommit and do not need setting AWS CLI credential, let me know if you have any question, thanks!</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;CodeCommit is a git service in AWS, you can own the private repository just a small fee, if you are personal or small group will be not charged any fee in some way.&lt;/p&gt;
+&lt;p&gt;Well, I will deploy my application from CodeCommit to EC2, below is my way. First I created a repository in CodeCommit.&lt;/p&gt;
+&lt;img src=&quot;/2016/08/13/How-to-clone-AWS-CodeCommit-repository-from-EC2-instance/Create_Repository_In_AWS_CodeCommit.png&quot; alt=&quot;Create repository in AWS CodeCommit&quot; title=&quot;Create repository in AWS CodeCommit&quot;&gt;
+&lt;p&gt;Before create a new EC2 instance, add a new IAM role.&lt;/p&gt;
+&lt;img src=&quot;/2016/08/13/How-to-clone-AWS-CodeCommit-repository-from-EC2-instance/Create_New_Role_In_IAM.png&quot; alt=&quot;Create a new role in AWS IAM}
+    
+    </summary>
+    
+    
+      <category term="AWS" scheme="https://blog.0x427567.com/tags/AWS/"/>
+    
+      <category term="CodeCommit" scheme="https://blog.0x427567.com/tags/CodeCommit/"/>
+    
+  </entry>
   
   <entry>
     <title>No tears understand callback in JavaScript</title>
