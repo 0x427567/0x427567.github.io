@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.0x427567.com/"/>
-  <updated>2016-08-21T09:30:15.000Z</updated>
+  <updated>2016-09-23T04:10:05.000Z</updated>
   <id>https://blog.0x427567.com/</id>
   
   <author>
@@ -14,6 +14,38 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>How to get response time with curl</title>
+    <link href="https://blog.0x427567.com/2016/09/23/How-to-get-response-time-with-curl/"/>
+    <id>https://blog.0x427567.com/2016/09/23/How-to-get-response-time-with-curl/</id>
+    <published>2016-09-23T04:10:00.000Z</published>
+    <updated>2016-09-23T04:10:05.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>curl is a powerful tool help us send request to a website, for example:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ curl https://blog.0x427567.com/</div></pre></td></tr></table></figure>
+<p>Today, I will tech you guys how to get response time with curl, first we need add -w or –write-out option and we need to know total time, full command likes below:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ curl -w %&#123;time_total&#125; https://blog.0x427567.com/</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<p>Now total response time will append to end, but response time looks like response content, it’s ok, let’s add some options.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ curl -o /dev/null -s -w %&#123;time_total&#125;\\n https://blog.0x427567.com/</div></pre></td></tr></table></figure>
+<p>-s will use silent mode, you will not see progress meter or error message, -o can assign output location, for this case I don’t need save any log so I assign output to /dev/null, \n just break line.</p>
+<p>If you need save result to a log file, just assign path and file name.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ curl -o /dev/null -s -w &quot;Response Time: %&#123;time_total&#125;\\n&quot; https://blog.0x427567.com/ &gt; /tmp/curl.log</div></pre></td></tr></table></figure>
+<p>Please let me know if you have any question, thanks!</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;curl is a powerful tool help us send request to a website, for example:&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;$ curl https://blog.0x427567.com/&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;Today, I will tech you guys how to get response time with curl, first we need add -w or –write-out option and we need to know total time, full command likes below:&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;$ curl -w %&amp;#123;time_total&amp;#125; https://blog.0x427567.com/&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>How to clone AWS CodeCommit repository from EC2 instance</title>
