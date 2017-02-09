@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.0x427567.com/"/>
-  <updated>2017-02-09T01:00:57.000Z</updated>
+  <updated>2017-02-09T01:02:28.000Z</updated>
   <id>https://blog.0x427567.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://blog.0x427567.com/2017/02/09/How-to-add-sitemap-to-your-Hexo-blog/"/>
     <id>https://blog.0x427567.com/2017/02/09/How-to-add-sitemap-to-your-Hexo-blog/</id>
     <published>2017-02-09T00:42:41.000Z</published>
-    <updated>2017-02-09T01:00:57.000Z</updated>
+    <updated>2017-02-09T01:02:28.000Z</updated>
     
     <content type="html"><![CDATA[<p>If you need to know how to deploy your blog to GitHub Pages read <a href="/2016/08/04/Using-Hexo-to-build-a-blog-at-GitHub/" title="this article">this article</a> first.</p>
 <p>In latest version, Hexo still not include sitemap function, if you need to publish sitemap to webmaster tool some likes Google or Bing you will need install sitemap plugin by yourself.<br><a id="more"></a><br>First thing first, in your blog folder and install sitemap generator.</p>
@@ -38,6 +38,10 @@
     
     </summary>
     
+    
+      <category term="Tutorial" scheme="https://blog.0x427567.com/tags/Tutorial/"/>
+    
+      <category term="Hexo" scheme="https://blog.0x427567.com/tags/Hexo/"/>
     
   </entry>
   
@@ -213,7 +217,7 @@
     <link href="https://blog.0x427567.com/2016/08/04/Using-Hexo-to-build-a-blog-at-GitHub/"/>
     <id>https://blog.0x427567.com/2016/08/04/Using-Hexo-to-build-a-blog-at-GitHub/</id>
     <published>2016-08-04T13:08:58.000Z</published>
-    <updated>2016-09-23T04:12:50.000Z</updated>
+    <updated>2017-02-09T01:02:11.000Z</updated>
     
     <content type="html"><![CDATA[<p>Hexo is a fast, simple and powerful blog framework, it’s powered by Node.js, you can deploy your blog to <a href="https://pages.github.com/" title="GitHub Pages" target="_blank" rel="external">GitHub Pages</a>.</p>
 <h2 id="Create-a-new-repository-for-blog"><a href="#Create-a-new-repository-for-blog" class="headerlink" title="Create a new repository for blog"></a>Create a new repository for blog</h2><p>First thing first, you need create a repository for blog, but this step is not point in this article, please read detail at GitHub Pages.<br><a id="more"></a></p>
@@ -304,6 +308,8 @@
       <category term="Node.js" scheme="https://blog.0x427567.com/tags/Node-js/"/>
     
       <category term="GitHub" scheme="https://blog.0x427567.com/tags/GitHub/"/>
+    
+      <category term="Hexo" scheme="https://blog.0x427567.com/tags/Hexo/"/>
     
   </entry>
   
