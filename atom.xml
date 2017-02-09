@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.0x427567.com/"/>
-  <updated>2016-09-23T04:11:34.000Z</updated>
+  <updated>2017-02-09T01:00:57.000Z</updated>
   <id>https://blog.0x427567.com/</id>
   
   <author>
@@ -14,6 +14,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>How to add sitemap to your Hexo blog</title>
+    <link href="https://blog.0x427567.com/2017/02/09/How-to-add-sitemap-to-your-Hexo-blog/"/>
+    <id>https://blog.0x427567.com/2017/02/09/How-to-add-sitemap-to-your-Hexo-blog/</id>
+    <published>2017-02-09T00:42:41.000Z</published>
+    <updated>2017-02-09T01:00:57.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>If you need to know how to deploy your blog to GitHub Pages read <a href="/2016/08/04/Using-Hexo-to-build-a-blog-at-GitHub/" title="this article">this article</a> first.</p>
+<p>In latest version, Hexo still not include sitemap function, if you need to publish sitemap to webmaster tool some likes Google or Bing you will need install sitemap plugin by yourself.<br><a id="more"></a><br>First thing first, in your blog folder and install sitemap generator.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm i hexo-generator-sitemap --save</div></pre></td></tr></table></figure>
+<p>When the plugin is installed then edit your main _config.yml and add sitemap config likes below.</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="attr">sitemap:</span></div><div class="line"><span class="attr">  path:</span> sitemap.xml</div><div class="line"><span class="attr">  template:</span> ./sitemap_template.xml</div></pre></td></tr></table></figure>
+<p>Last step is deploy your blog to GitHub Pages, and sitemap.xml will likes below:</p>
+<p><a href="https://blog.0x427567.com/sitemap.xml">https://blog.0x427567.com/sitemap.xml</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;If you need to know how to deploy your blog to GitHub Pages read &lt;a href=&quot;/2016/08/04/Using-Hexo-to-build-a-blog-at-GitHub/&quot; title=&quot;this article&quot;&gt;this article&lt;/a&gt; first.&lt;/p&gt;
+&lt;p&gt;In latest version, Hexo still not include sitemap function, if you need to publish sitemap to webmaster tool some likes Google or Bing you will need install sitemap plugin by yourself.&lt;br&gt;
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>How to get response time with curl</title>

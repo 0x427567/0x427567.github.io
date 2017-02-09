@@ -3,17 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Tag: Nginx | 0x427567</title>
+  <title>How to add sitemap to your Hexo blog | 0x427567</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="0x427567">
-<meta property="og:url" content="https://blog.0x427567.com/tags/Nginx/index.html">
+  <meta name="description" content="If you need to know how to deploy your blog to GitHub Pages read this article first.
+In latest version, Hexo still not include sitemap function, if you need to publish sitemap to webmaster tool some l">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How to add sitemap to your Hexo blog">
+<meta property="og:url" content="https://blog.0x427567.com/2017/02/09/How-to-add-sitemap-to-your-Hexo-blog/index.html">
 <meta property="og:site_name" content="0x427567">
-<meta property="og:description" content="Description">
+<meta property="og:description" content="If you need to know how to deploy your blog to GitHub Pages read this article first.
+In latest version, Hexo still not include sitemap function, if you need to publish sitemap to webmaster tool some l">
+<meta property="og:updated_time" content="2017-02-09T01:00:57.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="0x427567">
-<meta name="twitter:description" content="Description">
+<meta name="twitter:title" content="How to add sitemap to your Hexo blog">
+<meta name="twitter:description" content="If you need to know how to deploy your blog to GitHub Pages read this article first.
+In latest version, Hexo still not include sitemap function, if you need to publish sitemap to webmaster tool some l">
   
     <link rel="alternate" href="/atom.xml" title="0x427567" type="application/atom+xml">
   
@@ -89,39 +93,67 @@ ga('send', 'pageview');
 <script>
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
-
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2016/08/05/How-to-setting-Nginx-proxy-pass-and-forward-query-parameters/" class="archive-article-date">
-  <time datetime="2016-08-05T04:21:58.000Z" itemprop="datePublished">Aug 5</time>
+<article id="post-How-to-add-sitemap-to-your-Hexo-blog" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/02/09/How-to-add-sitemap-to-your-Hexo-blog/" class="article-date">
+  <time datetime="2017-02-09T00:42:41.000Z" itemprop="datePublished">2017-02-09</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/08/05/How-to-setting-Nginx-proxy-pass-and-forward-query-parameters/">How to setting Nginx proxy_pass and forward query parameters</a>
+    <h1 class="article-title" itemprop="name">
+      How to add sitemap to your Hexo blog
     </h1>
   
 
-    </header>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>If you need to know how to deploy your blog to GitHub Pages read <a href="/2016/08/04/Using-Hexo-to-build-a-blog-at-GitHub/" title="this article">this article</a> first.</p>
+<p>In latest version, Hexo still not include sitemap function, if you need to publish sitemap to webmaster tool some likes Google or Bing you will need install sitemap plugin by yourself.<br><a id="more"></a><br>First thing first, in your blog folder and install sitemap generator.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm i hexo-generator-sitemap --save</div></pre></td></tr></table></figure>
+<p>When the plugin is installed then edit your main _config.yml and add sitemap config likes below.</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="attr">sitemap:</span></div><div class="line"><span class="attr">  path:</span> sitemap.xml</div><div class="line"><span class="attr">  template:</span> ./sitemap_template.xml</div></pre></td></tr></table></figure>
+<p>Last step is deploy your blog to GitHub Pages, and sitemap.xml will likes below:</p>
+<p><a href="https://blog.0x427567.com/sitemap.xml">https://blog.0x427567.com/sitemap.xml</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://blog.0x427567.com/2017/02/09/How-to-add-sitemap-to-your-Hexo-blog/" data-id="ciyxoho0m0003pesgvf6yimc8" class="article-share-link">Share</a>
+      
+        <a href="https://blog.0x427567.com/2017/02/09/How-to-add-sitemap-to-your-Hexo-blog/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/09/23/How-to-get-response-time-with-curl/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">How to get response time with curl</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
 
 </section>
         
@@ -215,11 +247,13 @@ ga('send', 'pageview');
 <script>
   var disqus_shortname = '0x427567';
   
+  var disqus_url = 'https://blog.0x427567.com/2017/02/09/How-to-add-sitemap-to-your-Hexo-blog/';
+  
   (function(){
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
   })();
 </script>
