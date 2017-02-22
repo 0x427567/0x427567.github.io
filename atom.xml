@@ -39,9 +39,9 @@
     </summary>
     
     
-      <category term="Tutorial" scheme="https://blog.0x427567.com/tags/Tutorial/"/>
-    
       <category term="Hexo" scheme="https://blog.0x427567.com/tags/Hexo/"/>
+    
+      <category term="Tutorial" scheme="https://blog.0x427567.com/tags/Tutorial/"/>
     
   </entry>
   
@@ -168,7 +168,7 @@
     
     <content type="html"><![CDATA[<p>Do you need to know your website or server still alive from internet? Uptime Robot will help you to monitoring your server from internet and it is free! For free user, Uptime Robot provide 50 monitors and check it every 5 minutes, you can upgrade your account to pro plan then you can monitoring every 30 seconds.<br><a id="more"></a><br>Uptime Robot looks perfect! hmm! I think it’s great but not perfect. First it is not provide single location check, for example, the world only Japan can not connect to your server, but Uptime Robot still tell you all thing is ok, you do not know your customer is on fire.</p>
 <p>Second, sometime monitor will broken and not come back again, I need delete this monitor and create a new monitor again, all history log and data will gone.</p>
-<p>Uptime Robot<br><a href="https://uptimerobot.com/" target="_blank" rel="external">https://uptimerobot.com/</a></p>
+<p>Uptime Robot<br><a href="https://uptimerobot.com/" rel="external nofollow noopener noreferrer" target="_blank">https://uptimerobot.com/</a></p>
 ]]></content>
     
     <summary type="html">
@@ -219,9 +219,9 @@
     <published>2016-08-04T13:08:58.000Z</published>
     <updated>2017-02-09T01:02:11.000Z</updated>
     
-    <content type="html"><![CDATA[<p>Hexo is a fast, simple and powerful blog framework, it’s powered by Node.js, you can deploy your blog to <a href="https://pages.github.com/" title="GitHub Pages" target="_blank" rel="external">GitHub Pages</a>.</p>
+    <content type="html"><![CDATA[<p>Hexo is a fast, simple and powerful blog framework, it’s powered by Node.js, you can deploy your blog to <a href="https://pages.github.com/" title="GitHub Pages" rel="external nofollow noopener noreferrer" target="_blank">GitHub Pages</a>.</p>
 <h2 id="Create-a-new-repository-for-blog"><a href="#Create-a-new-repository-for-blog" class="headerlink" title="Create a new repository for blog"></a>Create a new repository for blog</h2><p>First thing first, you need create a repository for blog, but this step is not point in this article, please read detail at GitHub Pages.<br><a id="more"></a></p>
-<h2 id="Install-Node-js"><a href="#Install-Node-js" class="headerlink" title="Install Node.js"></a>Install Node.js</h2><p>Now check Node.js is installed, if you never install Node.js, I recommended use <a href="https://github.com/creationix/nvm" title="NVM(Node Version Manager)" target="_blank" rel="external">NVM(Node Version Manager)</a></p>
+<h2 id="Install-Node-js"><a href="#Install-Node-js" class="headerlink" title="Install Node.js"></a>Install Node.js</h2><p>Now check Node.js is installed, if you never install Node.js, I recommended use <a href="https://github.com/creationix/nvm" title="NVM(Node Version Manager)" rel="external nofollow noopener noreferrer" target="_blank">NVM(Node Version Manager)</a></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">wget -qO- https://raw.github.com/creationix/nvm/master/install.sh | sh</div></pre></td></tr></table></figure>
 <p>When install is done, you need to restart your terminal and install Node.js.</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">nvm install stable</div></pre></td></tr></table></figure>
@@ -297,19 +297,19 @@
     
     <summary type="html">
     
-      &lt;p&gt;Hexo is a fast, simple and powerful blog framework, it’s powered by Node.js, you can deploy your blog to &lt;a href=&quot;https://pages.github.com/&quot; title=&quot;GitHub Pages&quot;&gt;GitHub Pages&lt;/a&gt;.&lt;/p&gt;
+      &lt;p&gt;Hexo is a fast, simple and powerful blog framework, it’s powered by Node.js, you can deploy your blog to &lt;a href=&quot;https://pages.github.com/&quot; title=&quot;GitHub Pages&quot; rel=&quot;external nofollow noopener noreferrer&quot; target=&quot;_blank&quot;&gt;GitHub Pages&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&quot;Create-a-new-repository-for-blog&quot;&gt;&lt;a href=&quot;#Create-a-new-repository-for-blog&quot; class=&quot;headerlink&quot; title=&quot;Create a new repository for blog&quot;&gt;&lt;/a&gt;Create a new repository for blog&lt;/h2&gt;&lt;p&gt;First thing first, you need create a repository for blog, but this step is not point in this article, please read detail at GitHub Pages.&lt;br&gt;
     
     </summary>
     
+    
+      <category term="Hexo" scheme="https://blog.0x427567.com/tags/Hexo/"/>
     
       <category term="Tutorial" scheme="https://blog.0x427567.com/tags/Tutorial/"/>
     
       <category term="Node.js" scheme="https://blog.0x427567.com/tags/Node-js/"/>
     
       <category term="GitHub" scheme="https://blog.0x427567.com/tags/GitHub/"/>
-    
-      <category term="Hexo" scheme="https://blog.0x427567.com/tags/Hexo/"/>
     
   </entry>
   
