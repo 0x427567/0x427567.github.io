@@ -3,17 +3,24 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives: 2016 | 0x427567</title>
+  <title>A shell script about MySQL backup | 0x427567</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="0x427567">
-<meta property="og:url" content="https://blog.0x427567.com/archives/2016/index.html">
+  <meta name="description" content="Hello, here is a simple shell script, it can help me easy going to backup MySQL, I hope this script can help you all. Below is full script or you can clone from my GitHub url.
+Features
+Sync to remote">
+<meta property="og:type" content="article">
+<meta property="og:title" content="A shell script about MySQL backup">
+<meta property="og:url" content="https://blog.0x427567.com/2017/03/08/A-shell-script-about-MySQL-backup/index.html">
 <meta property="og:site_name" content="0x427567">
-<meta property="og:description" content="Description">
+<meta property="og:description" content="Hello, here is a simple shell script, it can help me easy going to backup MySQL, I hope this script can help you all. Below is full script or you can clone from my GitHub url.
+Features
+Sync to remote">
+<meta property="og:updated_time" content="2017-03-08T03:23:54.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="0x427567">
-<meta name="twitter:description" content="Description">
+<meta name="twitter:title" content="A shell script about MySQL backup">
+<meta name="twitter:description" content="Hello, here is a simple shell script, it can help me easy going to backup MySQL, I hope this script can help you all. Below is full script or you can clone from my GitHub url.
+Features
+Sync to remote">
   
     <link rel="alternate" href="/atom.xml" title="0x427567" type="application/atom+xml">
   
@@ -85,134 +92,72 @@ ga('send', 'pageview');
 <script>
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
-
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2016/09/23/How-to-get-response-time-with-curl/" class="archive-article-date">
-  <time datetime="2016-09-23T04:10:00.000Z" itemprop="datePublished">Sep 23</time>
+<article id="post-A-shell-script-about-MySQL-backup" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/03/08/A-shell-script-about-MySQL-backup/" class="article-date">
+  <time datetime="2017-03-08T03:11:43.000Z" itemprop="datePublished">2017-03-08</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/09/23/How-to-get-response-time-with-curl/">How to get response time with curl</a>
+    <h1 class="article-title" itemprop="name">
+      A shell script about MySQL backup
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2016/08/13/How-to-clone-AWS-CodeCommit-repository-from-EC2-instance/" class="archive-article-date">
-  <time datetime="2016-08-13T10:36:36.000Z" itemprop="datePublished">Aug 13</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/08/13/How-to-clone-AWS-CodeCommit-repository-from-EC2-instance/">How to clone AWS CodeCommit repository from EC2 instance</a>
-    </h1>
-  
+        <p>Hello, here is a simple shell script, it can help me easy going to backup MySQL, I hope this script can help you all. Below is full script or you can clone from <a href="[https://github.com/ShawnOY/shell-script]" title="[my GitHub]">my GitHub url</a>.</p>
+<h1 id="Features"><a href="#Features" class="headerlink" title="Features"></a>Features</h1><ul>
+<li>Sync to remote server.</li>
+<li>Auto delete older than N days backup file.<a id="more"></a>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div></pre></td><td class="code"><pre><div class="line">#!/bin/bash</div><div class="line"></div><div class="line"># Detect commands path</div><div class="line">DUMP=`which mysqldump`</div><div class="line">GZIP=`which gzip`</div><div class="line">FIND=`which find`</div><div class="line"></div><div class="line"># MySQL username &amp; password</div><div class="line">USER=&apos;&apos;</div><div class="line">PASSWD=&apos;&apos;</div><div class="line"></div><div class="line"># rsync username, password, backup module and remote server</div><div class="line">RUSER=&apos;&apos;</div><div class="line">RPASSWD=&apos;&apos;</div><div class="line">RMODULE=&apos;&apos;</div><div class="line">RSERVER=&apos;&apos;</div><div class="line"></div><div class="line"># Backup folder</div><div class="line">BACKUPFOLDER=&apos;&apos;</div><div class="line"></div><div class="line"># How older backup files will delete(Unit: day)</div><div class="line">OLDER=7</div><div class="line"></div><div class="line"># Which database needs to backup</div><div class="line">databases=(</div><div class="line">)</div><div class="line"></div><div class="line"># Start backup</div><div class="line">for db in $&#123;databases[@]&#125;;</div><div class="line">do</div><div class="line">  echo Backuping database: $db</div><div class="line">  $DUMP -u$USER -p$PASSWD --databases $db | $GZIP &gt; $BACKUPFOLDER/$db-`date +%Y%m%d%H%M`.sql.gz</div><div class="line">done</div><div class="line"></div><div class="line"># Delete old backup files</div><div class="line">$FIND $BACKUPFOLDER/* -mtime +$OLDER -exec rm &#123;&#125; \;</div><div class="line"></div><div class="line"># rsync password</div><div class="line">export RSYNC_PASSWORD=$RPASSWD</div><div class="line"></div><div class="line"># Start sync to remote server</div><div class="line">rsync -avrHS --delete $BACKUPFOLDER/ $RUSER@$RSERVER::$RMODULE</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><strong>Notice</strong></p>
+<p>rsync is using its backup module, so you need to setting your rsync.conf.</p>
+<p>If you have any question, let me know it please, just write down in the below! :)</p>
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2016/08/09/No-tears-understand-callback-in-JavaScript/" class="archive-article-date">
-  <time datetime="2016-08-09T09:07:34.000Z" itemprop="datePublished">Aug 9</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/08/09/No-tears-understand-callback-in-JavaScript/">No tears understand callback in JavaScript</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2016/08/05/Uptime-Robot-Free-monitoring-your-server/" class="archive-article-date">
-  <time datetime="2016-08-05T08:10:20.000Z" itemprop="datePublished">Aug 5</time>
-</a>
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://blog.0x427567.com/2017/03/08/A-shell-script-about-MySQL-backup/" data-id="cj00ehdy00000zfsgupqz62ns" class="article-share-link">Share</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/08/05/Uptime-Robot-Free-monitoring-your-server/">Uptime Robot - Free monitoring your server</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2016/08/05/How-to-setting-Nginx-proxy-pass-and-forward-query-parameters/" class="archive-article-date">
-  <time datetime="2016-08-05T04:21:58.000Z" itemprop="datePublished">Aug 5</time>
-</a>
+        <a href="https://blog.0x427567.com/2017/03/08/A-shell-script-about-MySQL-backup/#disqus_thread" class="article-comment-link">Comments</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/08/05/How-to-setting-Nginx-proxy-pass-and-forward-query-parameters/">How to setting Nginx proxy_pass and forward query parameters</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2016/08/04/Using-Hexo-to-build-a-blog-at-GitHub/" class="archive-article-date">
-  <time datetime="2016-08-04T13:08:58.000Z" itemprop="datePublished">Aug 4</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/08/04/Using-Hexo-to-build-a-blog-at-GitHub/">Using Hexo to build a blog at GitHub</a>
-    </h1>
-  
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Database/">Database</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DevOps/">DevOps</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MySQL/">MySQL</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Shell-Script/">Shell Script</a></li></ul>
 
-    </header>
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/02/09/How-to-add-sitemap-to-your-Hexo-blog/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">How to add sitemap to your Hexo blog</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
 
 </section>
         
@@ -306,11 +251,13 @@ ga('send', 'pageview');
 <script>
   var disqus_shortname = '0x427567';
   
+  var disqus_url = 'https://blog.0x427567.com/2017/03/08/A-shell-script-about-MySQL-backup/';
+  
   (function(){
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
   })();
 </script>

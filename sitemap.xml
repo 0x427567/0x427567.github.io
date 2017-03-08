@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.0x427567.com/2017/03/08/A-shell-script-about-MySQL-backup/</loc>
+    
+    <lastmod>2017-03-08T03:23:54.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.0x427567.com/2017/02/09/How-to-add-sitemap-to-your-Hexo-blog/</loc>
     
     <lastmod>2017-02-09T01:02:28.000Z</lastmod>

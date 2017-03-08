@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.0x427567.com/"/>
-  <updated>2017-02-09T01:02:28.000Z</updated>
+  <updated>2017-03-08T03:23:54.000Z</updated>
   <id>https://blog.0x427567.com/</id>
   
   <author>
@@ -14,6 +14,45 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>A shell script about MySQL backup</title>
+    <link href="https://blog.0x427567.com/2017/03/08/A-shell-script-about-MySQL-backup/"/>
+    <id>https://blog.0x427567.com/2017/03/08/A-shell-script-about-MySQL-backup/</id>
+    <published>2017-03-08T03:11:43.000Z</published>
+    <updated>2017-03-08T03:23:54.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Hello, here is a simple shell script, it can help me easy going to backup MySQL, I hope this script can help you all. Below is full script or you can clone from <a href="[https://github.com/ShawnOY/shell-script]" title="[my GitHub]">my GitHub url</a>.</p>
+<h1 id="Features"><a href="#Features" class="headerlink" title="Features"></a>Features</h1><ul>
+<li>Sync to remote server.</li>
+<li>Auto delete older than N days backup file.<a id="more"></a>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div></pre></td><td class="code"><pre><div class="line">#!/bin/bash</div><div class="line"></div><div class="line"># Detect commands path</div><div class="line">DUMP=`which mysqldump`</div><div class="line">GZIP=`which gzip`</div><div class="line">FIND=`which find`</div><div class="line"></div><div class="line"># MySQL username &amp; password</div><div class="line">USER=&apos;&apos;</div><div class="line">PASSWD=&apos;&apos;</div><div class="line"></div><div class="line"># rsync username, password, backup module and remote server</div><div class="line">RUSER=&apos;&apos;</div><div class="line">RPASSWD=&apos;&apos;</div><div class="line">RMODULE=&apos;&apos;</div><div class="line">RSERVER=&apos;&apos;</div><div class="line"></div><div class="line"># Backup folder</div><div class="line">BACKUPFOLDER=&apos;&apos;</div><div class="line"></div><div class="line"># How older backup files will delete(Unit: day)</div><div class="line">OLDER=7</div><div class="line"></div><div class="line"># Which database needs to backup</div><div class="line">databases=(</div><div class="line">)</div><div class="line"></div><div class="line"># Start backup</div><div class="line">for db in $&#123;databases[@]&#125;;</div><div class="line">do</div><div class="line">  echo Backuping database: $db</div><div class="line">  $DUMP -u$USER -p$PASSWD --databases $db | $GZIP &gt; $BACKUPFOLDER/$db-`date +%Y%m%d%H%M`.sql.gz</div><div class="line">done</div><div class="line"></div><div class="line"># Delete old backup files</div><div class="line">$FIND $BACKUPFOLDER/* -mtime +$OLDER -exec rm &#123;&#125; \;</div><div class="line"></div><div class="line"># rsync password</div><div class="line">export RSYNC_PASSWORD=$RPASSWD</div><div class="line"></div><div class="line"># Start sync to remote server</div><div class="line">rsync -avrHS --delete $BACKUPFOLDER/ $RUSER@$RSERVER::$RMODULE</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><strong>Notice</strong></p>
+<p>rsync is using its backup module, so you need to setting your rsync.conf.</p>
+<p>If you have any question, let me know it please, just write down in the below! :)</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Hello, here is a simple shell script, it can help me easy going to backup MySQL, I hope this script can help you all. Below is full script or you can clone from &lt;a href=&quot;[https://github.com/ShawnOY/shell-script]&quot; title=&quot;[my GitHub]&quot;&gt;my GitHub url&lt;/a&gt;.&lt;/p&gt;
+&lt;h1 id=&quot;Features&quot;&gt;&lt;a href=&quot;#Features&quot; class=&quot;headerlink&quot; title=&quot;Features&quot;&gt;&lt;/a&gt;Features&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;Sync to remote server.&lt;/li&gt;
+&lt;li&gt;Auto delete older than N days backup file.
+    
+    </summary>
+    
+    
+      <category term="MySQL" scheme="https://blog.0x427567.com/tags/MySQL/"/>
+    
+      <category term="Database" scheme="https://blog.0x427567.com/tags/Database/"/>
+    
+      <category term="Shell Script" scheme="https://blog.0x427567.com/tags/Shell-Script/"/>
+    
+      <category term="DevOps" scheme="https://blog.0x427567.com/tags/DevOps/"/>
+    
+  </entry>
   
   <entry>
     <title>How to add sitemap to your Hexo blog</title>
