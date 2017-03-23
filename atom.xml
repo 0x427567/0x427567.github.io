@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.0x427567.com/"/>
-  <updated>2017-03-08T03:28:31.000Z</updated>
+  <updated>2017-03-23T06:54:03.000Z</updated>
   <id>https://blog.0x427567.com/</id>
   
   <author>
@@ -14,6 +14,40 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Sweet!AWS Lambda is support Node.js 6.10 now!</title>
+    <link href="https://blog.0x427567.com/2017/03/23/Sweet-AWS-Lambda-is-support-Node-js-6-10-now/"/>
+    <id>https://blog.0x427567.com/2017/03/23/Sweet-AWS-Lambda-is-support-Node-js-6-10-now/</id>
+    <published>2017-03-23T06:54:03.000Z</published>
+    <updated>2017-03-23T06:54:03.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Today, AWS tweeted a message:</p>
+<blockquote><p>AWS Lambda now supports Node.js v6.10! #cloudcomputing <a href="http://amzn.to/2muc1Su" rel="external nofollow noopener noreferrer" target="_blank">http://amzn.to/2muc1Su</a></p>
+<footer><strong>@awscloud</strong><cite><a href="https://twitter.com/awscloud/status/844682201593659393" rel="external nofollow noopener noreferrer" target="_blank">twitter.com/awscloud/status/844682201593659393</a></cite></footer></blockquote>
+<a id="more"></a>
+<p>Sweet! Lambda is support Node.js 6.10 now!</p>
+<p>WAIT! What about Python 3? It still stuck in 2.7 version. Here is AWS official forum about support Python 3:</p>
+<p><a href="https://forums.aws.amazon.com/thread.jspa?threadID=234388" rel="external nofollow noopener noreferrer" target="_blank">https://forums.aws.amazon.com/thread.jspa?threadID=234388</a></p>
+<p>One year has passed, no more news, if you are a Python 3 developer, maybe you can reply the article and tell Amazon what you need.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Today, AWS tweeted a message:&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;AWS Lambda now supports Node.js v6.10! #cloudcomputing &lt;a href=&quot;http://amzn.to/2muc1Su&quot; rel=&quot;external nofollow noopener noreferrer&quot; target=&quot;_blank&quot;&gt;http://amzn.to/2muc1Su&lt;/a&gt;&lt;/p&gt;
+&lt;footer&gt;&lt;strong&gt;@awscloud&lt;/strong&gt;&lt;cite&gt;&lt;a href=&quot;https://twitter.com/awscloud/status/844682201593659393&quot; rel=&quot;external nofollow noopener noreferrer&quot; target=&quot;_blank&quot;&gt;twitter.com/awscloud/status/844682201593659393&lt;/a&gt;&lt;/cite&gt;&lt;/footer&gt;&lt;/blockquote&gt;
+    
+    </summary>
+    
+    
+      <category term="AWS" scheme="https://blog.0x427567.com/tags/AWS/"/>
+    
+      <category term="Lambda" scheme="https://blog.0x427567.com/tags/Lambda/"/>
+    
+      <category term="Node.js" scheme="https://blog.0x427567.com/tags/Node-js/"/>
+    
+  </entry>
   
   <entry>
     <title>A shell script about MySQL backup</title>
