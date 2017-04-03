@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.0x427567.com/2017/04/03/How-to-integrate-Express-js-and-Sequelize-Part-1/</loc>
+    
+    <lastmod>2017-04-03T05:50:03.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.0x427567.com/2017/03/23/Sweet-AWS-Lambda-is-support-Node-js-6-10-now/</loc>
     
     <lastmod>2017-03-23T06:54:03.000Z</lastmod>
