@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.0x427567.com/"/>
-  <updated>2017-04-13T07:02:19.000Z</updated>
+  <updated>2017-05-16T02:48:36.000Z</updated>
   <id>https://blog.0x427567.com/</id>
   
   <author>
@@ -14,6 +14,40 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Dockerize Google Guetzli</title>
+    <link href="https://blog.0x427567.com/2017/05/16/Dockerize-Google-guetzli/"/>
+    <id>https://blog.0x427567.com/2017/05/16/Dockerize-Google-guetzli/</id>
+    <published>2017-05-16T02:48:36.000Z</published>
+    <updated>2017-05-16T02:48:36.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="0x00-Introduction"><a href="#0x00-Introduction" class="headerlink" title="0x00 Introduction"></a>0x00 Introduction</h2><a href="https://github.com/google/guetzli" title="Google Guetzli" rel="external nofollow noopener noreferrer" target="_blank">Google Guetzli</a> is a JPEG encoder, it can compress image and lossless quality, in my case, the image size will reduce 15% ~ 50% and I can not know which one is compressed, below is example.<br><a id="more"></a>
+<img src="/2017/05/16/Dockerize-Google-guetzli/cat-origin.jpg" alt="Before" title="Before">
+<p>{ asset_img cat-compressed.jpg After %}</p>
+<p>But it is not perfect, Guetzli uses a lot CPU time and RAM, for a long time it will reduce cost likes CDN. Well, it’s cool and amazing so I decided dockerize  it to a micro service.</p>
+<h2 id="0x01-Prepare"><a href="#0x01-Prepare" class="headerlink" title="0x01 Prepare"></a>0x01 Prepare</h2><p>First, you need installed Docker in your system, second you need pull the image.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">docker pull shawnoy/guetzli</div></pre></td></tr></table></figure>
+<h2 id="0x02-How-to-use"><a href="#0x02-How-to-use" class="headerlink" title="0x02 How to use"></a>0x02 How to use</h2><p>In the image folder, run command below, origin.jpg is which one image you would be compress, output.jpg is output file name.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">docker run --rm -v $(pwd):/home/guetzli shawnoy/guetzli origin.jpg output.jpg</div></pre></td></tr></table></figure>
+<h2 id="0x03-More"><a href="#0x03-More" class="headerlink" title="0x03 More"></a>0x03 More</h2><p>You can find Dockerfile in my GitHub</p>
+<p><a href="https://github.com/ShawnOY/docker-guetzli" rel="external nofollow noopener noreferrer" target="_blank">https://github.com/ShawnOY/docker-guetzli</a></p>
+<p>Or you can find more in my Docker Hub</p>
+<p><a href="https://hub.docker.com/r/shawnoy/guetzli/" rel="external nofollow noopener noreferrer" target="_blank">https://hub.docker.com/r/shawnoy/guetzli/</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;0x00-Introduction&quot;&gt;&lt;a href=&quot;#0x00-Introduction&quot; class=&quot;headerlink&quot; title=&quot;0x00 Introduction&quot;&gt;&lt;/a&gt;0x00 Introduction&lt;/h2&gt;&lt;a href=&quot;https://github.com/google/guetzli&quot; title=&quot;Google Guetzli&quot; rel=&quot;external nofollow noopener noreferrer&quot; target=&quot;_blank&quot;&gt;Google Guetzli&lt;/a&gt; is a JPEG encoder, it can compress image and lossless quality, in my case, the image size will reduce 15% ~ 50% and I can not know which one is compressed, below is example.&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="Docker" scheme="https://blog.0x427567.com/tags/Docker/"/>
+    
+      <category term="Google" scheme="https://blog.0x427567.com/tags/Google/"/>
+    
+  </entry>
   
   <entry>
     <title>Solve screen error message Cannot open your terminal &#39;/dev/pts/0&#39;</title>
@@ -189,9 +223,9 @@
     </summary>
     
     
-      <category term="Tutorial" scheme="https://blog.0x427567.com/tags/Tutorial/"/>
-    
       <category term="Hexo" scheme="https://blog.0x427567.com/tags/Hexo/"/>
+    
+      <category term="Tutorial" scheme="https://blog.0x427567.com/tags/Tutorial/"/>
     
   </entry>
   
@@ -269,11 +303,11 @@
     </summary>
     
     
+      <category term="Tutorial" scheme="https://blog.0x427567.com/tags/Tutorial/"/>
+    
       <category term="AWS" scheme="https://blog.0x427567.com/tags/AWS/"/>
     
       <category term="CodeCommit" scheme="https://blog.0x427567.com/tags/CodeCommit/"/>
-    
-      <category term="Tutorial" scheme="https://blog.0x427567.com/tags/Tutorial/"/>
     
   </entry>
   
@@ -453,9 +487,9 @@
     </summary>
     
     
-      <category term="Tutorial" scheme="https://blog.0x427567.com/tags/Tutorial/"/>
-    
       <category term="Hexo" scheme="https://blog.0x427567.com/tags/Hexo/"/>
+    
+      <category term="Tutorial" scheme="https://blog.0x427567.com/tags/Tutorial/"/>
     
       <category term="Node.js" scheme="https://blog.0x427567.com/tags/Node-js/"/>
     

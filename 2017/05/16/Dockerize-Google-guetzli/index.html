@@ -3,17 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Tag: JavaScript | 0x427567</title>
+  <title>Dockerize Google Guetzli | 0x427567</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="A blog about Node.js, Elixir, database and system.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="0x427567">
-<meta property="og:url" content="https://blog.0x427567.com/tags/JavaScript/index.html">
+  <meta name="description" content="0x00 IntroductionGoogle Guetzli is a JPEG encoder, it can compress image and lossless quality, in my case, the image size will reduce 15% ~ 50% and I can not know which one is compressed, below is exa">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Dockerize Google Guetzli">
+<meta property="og:url" content="https://blog.0x427567.com/2017/05/16/Dockerize-Google-guetzli/index.html">
 <meta property="og:site_name" content="0x427567">
-<meta property="og:description" content="A blog about Node.js, Elixir, database and system.">
+<meta property="og:description" content="0x00 IntroductionGoogle Guetzli is a JPEG encoder, it can compress image and lossless quality, in my case, the image size will reduce 15% ~ 50% and I can not know which one is compressed, below is exa">
+<meta property="og:image" content="https://blog.0x427567.com/2017/05/16/Dockerize-Google-guetzli/cat-origin.jpg">
+<meta property="og:updated_time" content="2017-05-16T02:48:36.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="0x427567">
-<meta name="twitter:description" content="A blog about Node.js, Elixir, database and system.">
+<meta name="twitter:title" content="Dockerize Google Guetzli">
+<meta name="twitter:description" content="0x00 IntroductionGoogle Guetzli is a JPEG encoder, it can compress image and lossless quality, in my case, the image size will reduce 15% ~ 50% and I can not know which one is compressed, below is exa">
+<meta name="twitter:image" content="https://blog.0x427567.com/2017/05/16/Dockerize-Google-guetzli/cat-origin.jpg">
   
     <link rel="alternate" href="/atom.xml" title="0x427567" type="application/atom+xml">
   
@@ -85,39 +88,74 @@ ga('send', 'pageview');
 <script>
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
-
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2016/08/09/No-tears-understand-callback-in-JavaScript/" class="archive-article-date">
-  <time datetime="2016-08-09T09:07:34.000Z" itemprop="datePublished">Aug 9</time>
+<article id="post-Dockerize-Google-guetzli" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/05/16/Dockerize-Google-guetzli/" class="article-date">
+  <time datetime="2017-05-16T02:48:36.000Z" itemprop="datePublished">2017-05-16</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/08/09/No-tears-understand-callback-in-JavaScript/">No tears understand callback in JavaScript</a>
+    <h1 class="article-title" itemprop="name">
+      Dockerize Google Guetzli
     </h1>
   
 
-    </header>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="0x00-Introduction"><a href="#0x00-Introduction" class="headerlink" title="0x00 Introduction"></a>0x00 Introduction</h2><a href="https://github.com/google/guetzli" title="Google Guetzli" rel="external nofollow noopener noreferrer" target="_blank">Google Guetzli</a> is a JPEG encoder, it can compress image and lossless quality, in my case, the image size will reduce 15% ~ 50% and I can not know which one is compressed, below is example.<br><a id="more"></a>
+<img src="/2017/05/16/Dockerize-Google-guetzli/cat-origin.jpg" alt="Before" title="Before">
+<p>{ asset_img cat-compressed.jpg After %}</p>
+<p>But it is not perfect, Guetzli uses a lot CPU time and RAM, for a long time it will reduce cost likes CDN. Well, it’s cool and amazing so I decided dockerize  it to a micro service.</p>
+<h2 id="0x01-Prepare"><a href="#0x01-Prepare" class="headerlink" title="0x01 Prepare"></a>0x01 Prepare</h2><p>First, you need installed Docker in your system, second you need pull the image.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">docker pull shawnoy/guetzli</div></pre></td></tr></table></figure>
+<h2 id="0x02-How-to-use"><a href="#0x02-How-to-use" class="headerlink" title="0x02 How to use"></a>0x02 How to use</h2><p>In the image folder, run command below, origin.jpg is which one image you would be compress, output.jpg is output file name.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">docker run --rm -v $(pwd):/home/guetzli shawnoy/guetzli origin.jpg output.jpg</div></pre></td></tr></table></figure>
+<h2 id="0x03-More"><a href="#0x03-More" class="headerlink" title="0x03 More"></a>0x03 More</h2><p>You can find Dockerfile in my GitHub</p>
+<p><a href="https://github.com/ShawnOY/docker-guetzli" rel="external nofollow noopener noreferrer" target="_blank">https://github.com/ShawnOY/docker-guetzli</a></p>
+<p>Or you can find more in my Docker Hub</p>
+<p><a href="https://hub.docker.com/r/shawnoy/guetzli/" rel="external nofollow noopener noreferrer" target="_blank">https://hub.docker.com/r/shawnoy/guetzli/</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://blog.0x427567.com/2017/05/16/Dockerize-Google-guetzli/" data-id="cj2qylnnb0001c4sgxzjt2ufr" class="article-share-link">Share</a>
+      
+        <a href="https://blog.0x427567.com/2017/05/16/Dockerize-Google-guetzli/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Docker/">Docker</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Google/">Google</a></li></ul>
+
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/04/13/Solve-screen-error-message-Cannot-open-your-terminal-dev-pts-0/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Solve screen error message Cannot open your terminal &#39;/dev/pts/0&#39;</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
 
 </section>
         
@@ -211,11 +249,13 @@ ga('send', 'pageview');
 <script>
   var disqus_shortname = '0x427567';
   
+  var disqus_url = 'https://blog.0x427567.com/2017/05/16/Dockerize-Google-guetzli/';
+  
   (function(){
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
   })();
 </script>
