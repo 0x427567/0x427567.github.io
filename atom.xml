@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.0x427567.com/"/>
-  <updated>2017-05-16T02:49:28.000Z</updated>
+  <updated>2017-05-16T02:50:03.000Z</updated>
   <id>https://blog.0x427567.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://blog.0x427567.com/2017/05/16/Dockerize-Google-guetzli/"/>
     <id>https://blog.0x427567.com/2017/05/16/Dockerize-Google-guetzli/</id>
     <published>2017-05-16T02:48:36.000Z</published>
-    <updated>2017-05-16T02:49:28.000Z</updated>
+    <updated>2017-05-16T02:50:03.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="0x00-Introduction"><a href="#0x00-Introduction" class="headerlink" title="0x00 Introduction"></a>0x00 Introduction</h2><a href="https://github.com/google/guetzli" title="Google Guetzli" rel="external nofollow noopener noreferrer" target="_blank">Google Guetzli</a> is a JPEG encoder, it can compress image and lossless quality, in my case, the image size will reduce 15% ~ 50% and I can not know which one is compressed, below is example.<br><a id="more"></a>
 <img src="/2017/05/16/Dockerize-Google-guetzli/cat-origin.jpg" alt="Before" title="Before">
@@ -34,6 +34,7 @@
 <p><a href="https://github.com/ShawnOY/docker-guetzli" rel="external nofollow noopener noreferrer" target="_blank">https://github.com/ShawnOY/docker-guetzli</a></p>
 <p>Or you can find more in my Docker Hub</p>
 <p><a href="https://hub.docker.com/r/shawnoy/guetzli/" rel="external nofollow noopener noreferrer" target="_blank">https://hub.docker.com/r/shawnoy/guetzli/</a></p>
+<p>Let me know if you have any question, thanks! :)</p>
 ]]></content>
     
     <summary type="html">
