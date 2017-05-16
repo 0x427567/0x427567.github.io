@@ -189,9 +189,9 @@
     </summary>
     
     
-      <category term="Hexo" scheme="https://blog.0x427567.com/tags/Hexo/"/>
-    
       <category term="Tutorial" scheme="https://blog.0x427567.com/tags/Tutorial/"/>
+    
+      <category term="Hexo" scheme="https://blog.0x427567.com/tags/Hexo/"/>
     
   </entry>
   
@@ -269,11 +269,11 @@
     </summary>
     
     
-      <category term="Tutorial" scheme="https://blog.0x427567.com/tags/Tutorial/"/>
-    
       <category term="AWS" scheme="https://blog.0x427567.com/tags/AWS/"/>
     
       <category term="CodeCommit" scheme="https://blog.0x427567.com/tags/CodeCommit/"/>
+    
+      <category term="Tutorial" scheme="https://blog.0x427567.com/tags/Tutorial/"/>
     
   </entry>
   
@@ -453,9 +453,9 @@
     </summary>
     
     
-      <category term="Hexo" scheme="https://blog.0x427567.com/tags/Hexo/"/>
-    
       <category term="Tutorial" scheme="https://blog.0x427567.com/tags/Tutorial/"/>
+    
+      <category term="Hexo" scheme="https://blog.0x427567.com/tags/Hexo/"/>
     
       <category term="Node.js" scheme="https://blog.0x427567.com/tags/Node-js/"/>
     
