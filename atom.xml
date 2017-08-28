@@ -119,11 +119,11 @@
     </summary>
     
     
-      <category term="Database" scheme="https://blog.0x427567.com/tags/Database/"/>
-    
       <category term="Tutorial" scheme="https://blog.0x427567.com/tags/Tutorial/"/>
     
       <category term="Nodejs" scheme="https://blog.0x427567.com/tags/Nodejs/"/>
+    
+      <category term="Database" scheme="https://blog.0x427567.com/tags/Database/"/>
     
   </entry>
   
@@ -190,9 +190,9 @@
     </summary>
     
     
-      <category term="MySQL" scheme="https://blog.0x427567.com/tags/MySQL/"/>
-    
       <category term="Database" scheme="https://blog.0x427567.com/tags/Database/"/>
+    
+      <category term="MySQL" scheme="https://blog.0x427567.com/tags/MySQL/"/>
     
       <category term="Shell Script" scheme="https://blog.0x427567.com/tags/Shell-Script/"/>
     
@@ -224,9 +224,9 @@
     </summary>
     
     
-      <category term="Hexo" scheme="https://blog.0x427567.com/tags/Hexo/"/>
-    
       <category term="Tutorial" scheme="https://blog.0x427567.com/tags/Tutorial/"/>
+    
+      <category term="Hexo" scheme="https://blog.0x427567.com/tags/Hexo/"/>
     
   </entry>
   
@@ -275,7 +275,7 @@
 <p>Well, I will deploy my application from CodeCommit to EC2, below is my way. First I created a repository in CodeCommit.</p>
 <img src="/2016/08/13/How-to-clone-AWS-CodeCommit-repository-from-EC2-instance/Create_Repository_In_AWS_CodeCommit.png" alt="Create repository in AWS CodeCommit" title="Create repository in AWS CodeCommit">
 <p>Before create a new EC2 instance, add a new IAM role.</p>
-<img src="/2016/08/13/How-to-clone-AWS-CodeCommit-repository-from-EC2-instance/Create_New_Role_In_IAM.png" alt="Create a new role in AWS IAM} <a id=" more"=""> Now you will see this screen, click select button in **Amazon EC2**. {% asset_img Chose_Amazon_EC2.png Chose Amazon EC2" title="Create a new role in AWS IAM} <!--more--> Now you will see this screen, click select button in **Amazon EC2**. {% asset_img Chose_Amazon_EC2.png Chose Amazon EC2">
+<img src="/2016/08/13/How-to-clone-AWS-CodeCommit-repository-from-EC2-instance/Create_New_Role_In_IAM.png" alt="Create a new role in AWS IAM} <a id="more"></a> Now you will see this screen, click select button in **Amazon EC2**. {% asset_img Chose_Amazon_EC2.png Chose Amazon EC2" title="Create a new role in AWS IAM} <!--more--> Now you will see this screen, click select button in **Amazon EC2**. {% asset_img Chose_Amazon_EC2.png Chose Amazon EC2">
 <p>Input CodeCommit in filter and click <strong>AWSCodeCommitReadOnly</strong>.</p>
 <img src="/2016/08/13/How-to-clone-AWS-CodeCommit-repository-from-EC2-instance/Attach_CodeCommitReadOnly.png" alt="Attach AWSCodeCommitReadOnly" title="Attach AWSCodeCommitReadOnly">
 <p>Now review the IAM role, if no any problem then click <strong>Create Role</strong>.</p>
@@ -372,7 +372,7 @@
     <link href="https://blog.0x427567.com/2016/08/05/How-to-setting-Nginx-proxy-pass-and-forward-query-parameters/"/>
     <id>https://blog.0x427567.com/2016/08/05/How-to-setting-Nginx-proxy-pass-and-forward-query-parameters/</id>
     <published>2016-08-05T04:21:58.000Z</published>
-    <updated>2017-08-28T03:24:44.000Z</updated>
+    <updated>2017-08-28T03:37:53.000Z</updated>
     
     <content type="html"><![CDATA[<p>Let’s see basic config of proxy_pass.</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">upstream web &#123;</div><div class="line">    server 10.10.10.10;</div><div class="line">    server 10.10.10.20;</div><div class="line">&#125;</div><div class="line"></div><div class="line">server&#123;</div><div class="line">    listen 80;</div><div class="line">    server_name</div><div class="line">    location / &#123;</div><div class="line">        proxy_pass http://web/;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
@@ -391,10 +391,12 @@
     
     </summary>
     
+      <category term="Tutorial" scheme="https://blog.0x427567.com/categories/Tutorial/"/>
     
-      <category term="Tutorial" scheme="https://blog.0x427567.com/tags/Tutorial/"/>
     
       <category term="Nginx" scheme="https://blog.0x427567.com/tags/Nginx/"/>
+    
+      <category term="Tutorial" scheme="https://blog.0x427567.com/tags/Tutorial/"/>
     
   </entry>
   
@@ -489,13 +491,13 @@
     </summary>
     
     
-      <category term="Hexo" scheme="https://blog.0x427567.com/tags/Hexo/"/>
-    
       <category term="Tutorial" scheme="https://blog.0x427567.com/tags/Tutorial/"/>
     
       <category term="Node.js" scheme="https://blog.0x427567.com/tags/Node-js/"/>
     
       <category term="GitHub" scheme="https://blog.0x427567.com/tags/GitHub/"/>
+    
+      <category term="Hexo" scheme="https://blog.0x427567.com/tags/Hexo/"/>
     
   </entry>
   
