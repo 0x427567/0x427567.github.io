@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+
+    
+  <url>
+    <loc>https://blog.0x427567.com/2016/08/05/How-to-setting-Nginx-proxy-pass-and-forward-query-parameters/</loc>
+    <lastmod>2017-08-28T03:24:44.000Z</lastmod>
+    <data>
+        <display>
+        <title>How to setting Nginx proxy_pass and forward query parameters</title>
+        <pubTime>2016-08-05T04:21:58.000Z</pubTime>
+        
+        <tag>Tutorial</tag>
+         
+        <tag>Nginx</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.0x427567.com/2017/05/16/Dockerize-Google-guetzli/</loc>
+    <lastmod>2017-05-18T01:10:07.000Z</lastmod>
+    <data>
+        <display>
+        <title>Dockerize Google Guetzli</title>
+        <pubTime>2017-05-16T02:48:36.000Z</pubTime>
+        
+        <tag>Docker</tag>
+         
+        <tag>Google</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.0x427567.com/2017/04/03/How-to-integrate-Express-js-and-Sequelize-Part-1/</loc>
+    <lastmod>2017-05-15T04:43:52.000Z</lastmod>
+    <data>
+        <display>
+        <title>How to integrate Express.js and Sequelize - Part 1</title>
+        <pubTime>2017-04-03T05:45:25.000Z</pubTime>
+        
+        <tag>Database</tag>
+         
+        <tag>Tutorial</tag>
+         
+        <tag>Nodejs</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.0x427567.com/2017/04/13/Solve-screen-error-message-Cannot-open-your-terminal-dev-pts-0/</loc>
+    <lastmod>2017-04-13T07:02:19.000Z</lastmod>
+    <data>
+        <display>
+        <title>Solve screen error message Cannot open your terminal '/dev/pts/0'</title>
+        <pubTime>2017-04-13T06:59:41.000Z</pubTime>
+        
+        <tag>Tutorial</tag>
+         
+        <tag>Linux</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.0x427567.com/2017/03/23/Sweet-AWS-Lambda-is-support-Node-js-6-10-now/</loc>
+    <lastmod>2017-03-23T06:54:03.000Z</lastmod>
+    <data>
+        <display>
+        <title>Sweet!AWS Lambda is support Node.js 6.10 now!</title>
+        <pubTime>2017-03-23T06:54:03.000Z</pubTime>
+        
+        <tag>AWS</tag>
+         
+        <tag>Lambda</tag>
+         
+        <tag>Node.js</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.0x427567.com/2017/03/08/A-shell-script-about-MySQL-backup/</loc>
+    <lastmod>2017-03-08T03:28:31.000Z</lastmod>
+    <data>
+        <display>
+        <title>A shell script about MySQL backup</title>
+        <pubTime>2017-03-08T03:11:43.000Z</pubTime>
+        
+        <tag>MySQL</tag>
+         
+        <tag>Database</tag>
+         
+        <tag>Shell Script</tag>
+         
+        <tag>DevOps</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.0x427567.com/2017/02/09/How-to-add-sitemap-to-your-Hexo-blog/</loc>
+    <lastmod>2017-02-09T01:02:28.000Z</lastmod>
+    <data>
+        <display>
+        <title>How to add sitemap to your Hexo blog</title>
+        <pubTime>2017-02-09T00:42:41.000Z</pubTime>
+        
+        <tag>Hexo</tag>
+         
+        <tag>Tutorial</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.0x427567.com/2016/08/04/Using-Hexo-to-build-a-blog-at-GitHub/</loc>
+    <lastmod>2017-02-09T01:02:11.000Z</lastmod>
+    <data>
+        <display>
+        <title>Using Hexo to build a blog at GitHub</title>
+        <pubTime>2016-08-04T13:08:58.000Z</pubTime>
+        
+        <tag>Hexo</tag>
+         
+        <tag>Tutorial</tag>
+         
+        <tag>Node.js</tag>
+         
+        <tag>GitHub</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.0x427567.com/2016/08/09/No-tears-understand-callback-in-JavaScript/</loc>
+    <lastmod>2016-09-23T04:12:42.000Z</lastmod>
+    <data>
+        <display>
+        <title>No tears understand callback in JavaScript</title>
+        <pubTime>2016-08-09T09:07:34.000Z</pubTime>
+        
+        <tag>Tutorial</tag>
+         
+        <tag>JavaScript</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.0x427567.com/2016/08/13/How-to-clone-AWS-CodeCommit-repository-from-EC2-instance/</loc>
+    <lastmod>2016-09-23T04:12:29.000Z</lastmod>
+    <data>
+        <display>
+        <title>How to clone AWS CodeCommit repository from EC2 instance</title>
+        <pubTime>2016-08-13T10:36:36.000Z</pubTime>
+        
+        <tag>Tutorial</tag>
+         
+        <tag>AWS</tag>
+         
+        <tag>CodeCommit</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.0x427567.com/2016/09/23/How-to-get-response-time-with-curl/</loc>
+    <lastmod>2016-09-23T04:11:34.000Z</lastmod>
+    <data>
+        <display>
+        <title>How to get response time with curl</title>
+        <pubTime>2016-09-23T04:10:00.000Z</pubTime>
+        
+        <tag>Tutorial</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.0x427567.com/2016/08/05/Uptime-Robot-Free-monitoring-your-server/</loc>
+    <lastmod>2016-08-05T09:01:53.000Z</lastmod>
+    <data>
+        <display>
+        <title>Uptime Robot - Free monitoring your server</title>
+        <pubTime>2016-08-05T08:10:20.000Z</pubTime>
+        
+        <tag>DevOps</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+</urlset>
