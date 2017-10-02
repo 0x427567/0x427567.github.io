@@ -5,7 +5,7 @@
     
   <url>
     <loc>https://blog.0x427567.com/2017/10/02/How-to-integrate-Express-js-and-Sequelize-Part-1/</loc>
-    <lastmod>2017-10-02T09:15:13.000Z</lastmod>
+    <lastmod>2017-10-02T09:17:54.000Z</lastmod>
     <data>
         <display>
         <title>How to integrate Express.js and Sequelize - Part 1</title>
@@ -15,12 +15,15 @@
          
         <tag>Database</tag>
          
-        <tag>Nodejs</tag>
+        <tag>Node.js</tag>
          
          
            
              
               <breadCrumb title="Tutorial" url="https://blog.0x427567.com/categories/Tutorial/"/>
+          
+             
+              <breadCrumb title="Node.js" url="https://blog.0x427567.com/categories/Tutorial/Node-js/"/>
           
         </display>
     </data>
@@ -98,11 +101,11 @@
         <title>Sweet!AWS Lambda is support Node.js 6.10 now!</title>
         <pubTime>2017-03-23T06:54:03.000Z</pubTime>
         
+        <tag>Node.js</tag>
+         
         <tag>AWS</tag>
          
         <tag>Lambda</tag>
-         
-        <tag>Node.js</tag>
          
          
            
