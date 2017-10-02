@@ -84,7 +84,7 @@
     <link href="https://blog.0x427567.com/2017/04/03/How-to-integrate-Express-js-and-Sequelize-Part-1/"/>
     <id>https://blog.0x427567.com/2017/04/03/How-to-integrate-Express-js-and-Sequelize-Part-1/</id>
     <published>2017-04-03T05:45:25.000Z</published>
-    <updated>2017-10-02T09:22:25.000Z</updated>
+    <updated>2017-10-02T09:23:51.000Z</updated>
     
     <content type="html"><![CDATA[<a href="http://docs.sequelizejs.com/" title="Sequelize" rel="external nofollow noopener noreferrer" target="_blank">Sequelize</a> is an ORM for Node.js and it supports many databases such as MySQl, PostgreSQL, MSSQL, MariaDB and SQLite, I will show you how to using Sequelize in the Express. By the way, Sequelize is very different between v3 and v4, this article is focus on v4, for more information you can read <a href="http://docs.sequelizejs.com/manual/tutorial/upgrade-to-v4.html" rel="external nofollow noopener noreferrer" target="_blank">official document</a>.<br><a id="more"></a>
 <h2 id="0x01"><a href="#0x01" class="headerlink" title="0x01"></a>0x01</h2><p>First create a new Express app, you can build it yourself, but I recommended you use <a href="https://expressjs.com/en/starter/generator.html" title="express-generator" rel="external nofollow noopener noreferrer" target="_blank">express-generator</a>, so let’s install generator first. In general, we using npm to help handle packages, for now, I recommended use Yarn, but this article is not about it so we just show you how to do.</p>
