@@ -4,6 +4,30 @@
 
     
   <url>
+    <loc>https://blog.0x427567.com/2017/10/02/How-to-integrate-Express-js-and-Sequelize-Part-1/</loc>
+    <lastmod>2017-10-02T09:15:13.000Z</lastmod>
+    <data>
+        <display>
+        <title>How to integrate Express.js and Sequelize - Part 1</title>
+        <pubTime>2017-10-02T09:07:15.000Z</pubTime>
+        
+        <tag>Tutorial</tag>
+         
+        <tag>Database</tag>
+         
+        <tag>Nodejs</tag>
+         
+         
+           
+             
+              <breadCrumb title="Tutorial" url="https://blog.0x427567.com/categories/Tutorial/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://blog.0x427567.com/2016/08/05/How-to-setting-Nginx-proxy-pass-and-forward-query-parameters/</loc>
     <lastmod>2017-08-28T04:14:30.000Z</lastmod>
     <data>
@@ -39,27 +63,6 @@
         <tag>Docker</tag>
          
         <tag>Google</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://blog.0x427567.com/2017/04/03/How-to-integrate-Express-js-and-Sequelize-Part-1/</loc>
-    <lastmod>2017-05-15T04:43:52.000Z</lastmod>
-    <data>
-        <display>
-        <title>How to integrate Express.js and Sequelize - Part 1</title>
-        <pubTime>2017-04-03T05:45:25.000Z</pubTime>
-        
-        <tag>Tutorial</tag>
-         
-        <tag>Nodejs</tag>
-         
-        <tag>Database</tag>
          
          
            
@@ -116,9 +119,9 @@
         <title>A shell script about MySQL backup</title>
         <pubTime>2017-03-08T03:11:43.000Z</pubTime>
         
-        <tag>Database</tag>
-         
         <tag>MySQL</tag>
+         
+        <tag>Database</tag>
          
         <tag>Shell Script</tag>
          
@@ -160,11 +163,11 @@
         
         <tag>Tutorial</tag>
          
+        <tag>Hexo</tag>
+         
         <tag>Node.js</tag>
          
         <tag>GitHub</tag>
-         
-        <tag>Hexo</tag>
          
          
            

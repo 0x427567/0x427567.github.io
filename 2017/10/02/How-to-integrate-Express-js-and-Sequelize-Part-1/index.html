@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>How to integrate Express.js and Sequelize - Part 1 | 0x427567</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Sequelize is an ORM for Node.js and it supports many databases such as MySQl, PostgreSQL, MSSQL, MariaDB and SQLite, I will show you how to using Sequelize in the Express. By the way, Sequelize is ver">
+<meta name="keywords" content="Tutorial,Database,Nodejs">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How to integrate Express.js and Sequelize - Part 1">
+<meta property="og:url" content="https://blog.0x427567.com/2017/10/02/How-to-integrate-Express-js-and-Sequelize-Part-1/index.html">
+<meta property="og:site_name" content="0x427567">
+<meta property="og:description" content="Sequelize is an ORM for Node.js and it supports many databases such as MySQl, PostgreSQL, MSSQL, MariaDB and SQLite, I will show you how to using Sequelize in the Express. By the way, Sequelize is ver">
+<meta property="og:updated_time" content="2017-10-02T09:15:13.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="How to integrate Express.js and Sequelize - Part 1">
+<meta name="twitter:description" content="Sequelize is an ORM for Node.js and it supports many databases such as MySQl, PostgreSQL, MSSQL, MariaDB and SQLite, I will show you how to using Sequelize in the Express. By the way, Sequelize is ver">
+  
+    <link rel="alternate" href="/atom.xml" title="0x427567" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-64096346-2', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">0x427567</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">A geek, developer and gamer, regards.</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://blog.0x427567.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Blog-AD -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1156111256369308" data-ad-slot="7596823197" data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<article id="post-How-to-integrate-Express-js-and-Sequelize-Part-1" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/10/02/How-to-integrate-Express-js-and-Sequelize-Part-1/" class="article-date">
+  <time datetime="2017-10-02T09:07:15.000Z" itemprop="datePublished">2017-10-02</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Tutorial/">Tutorial</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      How to integrate Express.js and Sequelize - Part 1
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <a href="http://docs.sequelizejs.com/" title="Sequelize" rel="external nofollow noopener noreferrer" target="_blank">Sequelize</a> is an ORM for Node.js and it supports many databases such as MySQl, PostgreSQL, MSSQL, MariaDB and SQLite, I will show you how to using Sequelize in the Express. By the way, Sequelize is very different between v3 and v4, this article is focus on v4, for more information you can read (official document)[<a href="http://docs.sequelizejs.com/manual/tutorial/upgrade-to-v4.html" rel="external nofollow noopener noreferrer" target="_blank">http://docs.sequelizejs.com/manual/tutorial/upgrade-to-v4.html</a>].<br><a id="more"></a>
+<h2 id="0x01"><a href="#0x01" class="headerlink" title="0x01"></a>0x01</h2><p>First create a new Express app, you can build it yourself, but I recommended you use <a href="https://expressjs.com/en/starter/generator.html" title="express-generator" rel="external nofollow noopener noreferrer" target="_blank">express-generator</a>, so let’s install generator first. In general, we using npm to help handle packages, for now, I recommended use Yarn, but this article is not about it so we just show you how to do.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"># Install express-generator</div><div class="line">yarn global add express-generator</div><div class="line"></div><div class="line"># Create the app directory</div><div class="line">mkdir express-sequelize</div><div class="line">cd express-sequelize</div><div class="line"></div><div class="line"># Initial and use pug template engine</div><div class="line">express -f -v pug</div><div class="line"></div><div class="line"># Install modules</div><div class="line">yarn install</div></pre></td></tr></table></figure>
+<h2 id="0x02"><a href="#0x02" class="headerlink" title="0x02"></a>0x02</h2><p>Install related modules about database, for this sample I will use SQLite.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"># Install modules</div><div class="line">yarn add sequelize sequelize-cli sqlite3</div><div class="line"></div><div class="line"># Initial</div><div class="line">node_modules/.bin/sequelize init</div></pre></td></tr></table></figure>
+<h1 id="0x03"><a href="#0x03" class="headerlink" title="0x03"></a>0x03</h1><p>In this sample, we can manage masters, the master can owned many pets but pet only have a master, so generate two models first.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"># Generate a table named Master have one filed named &quot;name&quot;, the type is string</div><div class="line">node_modules/.bin/sequelize model:create --name Master --attributes name:string(20)</div><div class="line"></div><div class="line"># Generate a table named Pet have two fileds, it&apos;s name and MasterId, MasterId will be associate to Master table</div><div class="line">node_modules/.bin/sequelize model:create --name Pet --attributes name:string(20),MasterId:integer</div></pre></td></tr></table></figure>
+<p>sequelize-cli will add primary key for you, the field named id and type is integer, so in the pet model we need add MasterId field, by default, sequelize use table name and Id be foreign key, and first word is uppercase.</p>
+<p>Now you have two model files in the models directory and named master.js and pet.js, next step we will create a simple associate.</p>
+<h1 id="0x04"><a href="#0x04" class="headerlink" title="0x04"></a>0x04</h1><p>Open your master.js you will see the code likes below.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="meta">'use strict'</span>;</div><div class="line"><span class="built_in">module</span>.exports = <span class="function">(<span class="params">sequelize, DataTypes</span>) =&gt;</span> &#123;</div><div class="line">  <span class="keyword">var</span> Master = sequelize.define(<span class="string">'Master'</span>, &#123;</div><div class="line">    <span class="attr">name</span>: DataTypes.STRING(<span class="number">20</span>)</div><div class="line">  &#125;, &#123;</div><div class="line">    <span class="attr">classMethods</span>: &#123;</div><div class="line">      <span class="attr">associate</span>: <span class="function"><span class="keyword">function</span>(<span class="params">models</span>) </span>&#123;</div><div class="line">        <span class="comment">// associations can be defined here</span></div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">  &#125;);</div><div class="line">  <span class="keyword">return</span> Master;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p>Let’s add associate.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="meta">'use strict'</span>;</div><div class="line"></div><div class="line"><span class="built_in">module</span>.exports = <span class="function">(<span class="params">sequelize, DataTypes</span>) =&gt;</span> &#123;</div><div class="line">  <span class="keyword">const</span> Master = sequelize.define(<span class="string">'Master'</span>, &#123;</div><div class="line">    <span class="attr">name</span>: DataTypes.STRING(<span class="number">20</span>)</div><div class="line">  &#125;)</div><div class="line"></div><div class="line">  Master.associate = <span class="function"><span class="params">models</span> =&gt;</span> &#123;</div><div class="line">    Master.hasMany(models.Pet)</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="keyword">return</span> Master;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>Next open your pet.js you will see the code likes below.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="meta">'use strict'</span>;</div><div class="line"><span class="built_in">module</span>.exports = <span class="function">(<span class="params">sequelize, DataTypes</span>) =&gt;</span> &#123;</div><div class="line">  <span class="keyword">var</span> Pet = sequelize.define(<span class="string">'Pet'</span>, &#123;</div><div class="line">    <span class="attr">name</span>: DataTypes.STRING(<span class="number">20</span>),</div><div class="line">    <span class="attr">MasterId</span>: DataTypes.INTEGER</div><div class="line">  &#125;, &#123;</div><div class="line">    <span class="attr">classMethods</span>: &#123;</div><div class="line">      <span class="attr">associate</span>: <span class="function"><span class="keyword">function</span>(<span class="params">models</span>) </span>&#123;</div><div class="line">        <span class="comment">// associations can be defined here</span></div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">  &#125;);</div><div class="line">  <span class="keyword">return</span> Pet;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p>Now add associate to Pet model.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="meta">'use strict'</span></div><div class="line"></div><div class="line"><span class="built_in">module</span>.exports = <span class="function">(<span class="params">sequelize, DataTypes</span>) =&gt;</span> &#123;</div><div class="line">  <span class="keyword">const</span> Pet = sequelize.define(<span class="string">'Pet'</span>, &#123;</div><div class="line">    <span class="attr">name</span>: DataTypes.STRING(<span class="number">20</span>),</div><div class="line">    <span class="attr">MasterId</span>: DataTypes.INTEGER</div><div class="line">  &#125;)</div><div class="line"></div><div class="line">  Pet.associate = <span class="function"><span class="params">models</span> =&gt;</span> &#123;</div><div class="line">    Pet.belongsTo(models.Master)</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="keyword">return</span> Pet</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>It’s so easy right?</p>
+<h2 id="0x05"><a href="#0x05" class="headerlink" title="0x05"></a>0x05</h2><p>In this step, we need to edit database config, open your config.json, you can find it in the config directory.</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">"development"</span>: &#123;</div><div class="line">    <span class="attr">"dialect"</span>: <span class="string">"sqlite"</span>,</div><div class="line">    <span class="attr">"storage"</span>: <span class="string">"./express-sequelize.development.sqlite"</span></div><div class="line">  &#125;,</div><div class="line">  <span class="attr">"test"</span>: &#123;</div><div class="line">    <span class="attr">"dialect"</span>: <span class="string">"sqlite"</span>,</div><div class="line">    <span class="attr">"storage"</span>: <span class="string">"memory"</span></div><div class="line">  &#125;,</div><div class="line">  <span class="attr">"production"</span>: &#123;</div><div class="line">    <span class="attr">"username"</span>: <span class="string">"root"</span>,</div><div class="line">    <span class="attr">"password"</span>: <span class="literal">null</span>,</div><div class="line">    <span class="attr">"database"</span>: <span class="string">"database_production"</span>,</div><div class="line">    <span class="attr">"host"</span>: <span class="string">"127.0.0.1"</span>,</div><div class="line">    <span class="attr">"dialect"</span>: <span class="string">"mysql"</span></div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="0x06"><a href="#0x06" class="headerlink" title="0x06"></a>0x06</h2><p>This is last step in part 1, now we need to initial database, create table and some else.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">node_modules/.bin/sequelize db:migrate</div></pre></td></tr></table></figure>
+<p>You will find a sqlite file created in your app root.</p>
+<p>Well, how to use I will show you in the next part, let me know if you have any question, thanks!</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://blog.0x427567.com/2017/10/02/How-to-integrate-Express-js-and-Sequelize-Part-1/" data-id="cj89yn3lb00061wsgskx8m9m8" class="article-share-link">Share</a>
+      
+        <a href="https://blog.0x427567.com/2017/10/02/How-to-integrate-Express-js-and-Sequelize-Part-1/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Database/">Database</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Nodejs/">Nodejs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Tutorial/">Tutorial</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/05/16/Dockerize-Google-guetzli/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Dockerize Google Guetzli</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Tutorial/">Tutorial</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Tutorial/Networking/">Networking</a></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AWS/">AWS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CodeCommit/">CodeCommit</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Database/">Database</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DevOps/">DevOps</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Docker/">Docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GitHub/">GitHub</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Google/">Google</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Lambda/">Lambda</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MySQL/">MySQL</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Nginx/">Nginx</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node-js/">Node.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Nodejs/">Nodejs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Shell-Script/">Shell Script</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tutorial/">Tutorial</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/AWS/" style="font-size: 15px;">AWS</a> <a href="/tags/CodeCommit/" style="font-size: 10px;">CodeCommit</a> <a href="/tags/Database/" style="font-size: 15px;">Database</a> <a href="/tags/DevOps/" style="font-size: 15px;">DevOps</a> <a href="/tags/Docker/" style="font-size: 10px;">Docker</a> <a href="/tags/GitHub/" style="font-size: 10px;">GitHub</a> <a href="/tags/Google/" style="font-size: 10px;">Google</a> <a href="/tags/Hexo/" style="font-size: 15px;">Hexo</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Lambda/" style="font-size: 10px;">Lambda</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/MySQL/" style="font-size: 10px;">MySQL</a> <a href="/tags/Nginx/" style="font-size: 10px;">Nginx</a> <a href="/tags/Node-js/" style="font-size: 15px;">Node.js</a> <a href="/tags/Nodejs/" style="font-size: 10px;">Nodejs</a> <a href="/tags/Shell-Script/" style="font-size: 10px;">Shell Script</a> <a href="/tags/Tutorial/" style="font-size: 20px;">Tutorial</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/10/02/How-to-integrate-Express-js-and-Sequelize-Part-1/">How to integrate Express.js and Sequelize - Part 1</a>
+          </li>
+        
+          <li>
+            <a href="/2017/05/16/Dockerize-Google-guetzli/">Dockerize Google Guetzli</a>
+          </li>
+        
+          <li>
+            <a href="/2017/04/13/Solve-screen-error-message-Cannot-open-your-terminal-dev-pts-0/">Solve screen error message Cannot open your terminal &#39;/dev/pts/0&#39;</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/23/Sweet-AWS-Lambda-is-support-Node-js-6-10-now/">Sweet!AWS Lambda is support Node.js 6.10 now!</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/08/A-shell-script-about-MySQL-backup/">A shell script about MySQL backup</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 Shawn OY<br>
+      Powered by <a href="http://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+<script>
+  var disqus_shortname = '0x427567';
+  
+  var disqus_url = 'https://blog.0x427567.com/2017/10/02/How-to-integrate-Express-js-and-Sequelize-Part-1/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+

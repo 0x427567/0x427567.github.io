@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.0x427567.com/2017/10/02/How-to-integrate-Express-js-and-Sequelize-Part-1/</loc>
+    
+    <lastmod>2017-10-02T09:15:13.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.0x427567.com/2016/08/05/How-to-setting-Nginx-proxy-pass-and-forward-query-parameters/</loc>
     
     <lastmod>2017-08-28T04:14:30.000Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>https://blog.0x427567.com/2017/05/16/Dockerize-Google-guetzli/</loc>
     
     <lastmod>2017-05-18T01:10:07.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.0x427567.com/2017/04/03/How-to-integrate-Express-js-and-Sequelize-Part-1/</loc>
-    
-    <lastmod>2017-05-15T04:43:52.000Z</lastmod>
     
   </url>
   
