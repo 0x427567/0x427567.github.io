@@ -11,6 +11,7 @@
 <meta property="og:url" content="https://blog.0x427567.com/index.html">
 <meta property="og:site_name" content="0x427567">
 <meta property="og:description" content="A blog about Node.js, Elixir, database and system.">
+<meta property="og:locale" content="default">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="0x427567">
 <meta name="twitter:description" content="A blog about Node.js, Elixir, database and system.">
@@ -87,12 +88,69 @@ ga('send', 'pageview');
 </script>
 
   
+    <article id="post-How-to-integrate-Express-js-and-Sequelize-Part-2" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/10/06/How-to-integrate-Express-js-and-Sequelize-Part-2/" class="article-date">
+  <time datetime="2017-10-06T04:25:12.000Z" itemprop="datePublished">2017-10-06</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Tutorial/">Tutorial</a>►<a class="article-category-link" href="/categories/Tutorial/Node-js/">Node.js</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/10/06/How-to-integrate-Express-js-and-Sequelize-Part-2/">How to integrate Express.js and Sequelize - Part 2</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>This article will continued Part 1, in the part 1 we create two models, in the part 2 we will know how to use model to do CRUD(Create, Read, Update, Delete).</p>
+<p>If you are lost, do not know what is this, you may read <a href="/2017/04/03/How-to-integrate-Express-js-and-Sequelize-Part-1/" title="part 1">part 1</a> first.</p>
+<h2 id="0x00"><a href="#0x00" class="headerlink" title="0x00"></a>0x00</h2><p>We need a page to display master information, first edit your index route in the routes directory, it could look likes below.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>);</div><div class="line"><span class="keyword">var</span> router = express.Router();</div><div class="line"></div><div class="line"><span class="comment">/* GET home page. */</span></div><div class="line">router.get(<span class="string">'/'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">req, res, next</span>) </span>&#123;</div><div class="line">  res.render(<span class="string">'index'</span>, &#123; <span class="attr">title</span>: <span class="string">'Express'</span> &#125;);</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="built_in">module</span>.exports = router;</div></pre></td></tr></table></figure>
+        
+          <p class="article-more-link">
+            <a href="/2017/10/06/How-to-integrate-Express-js-and-Sequelize-Part-2/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://blog.0x427567.com/2017/10/06/How-to-integrate-Express-js-and-Sequelize-Part-2/" data-id="cj8fe0qma000a8vsg4v5ljx9h" class="article-share-link">Share</a>
+      
+        <a href="https://blog.0x427567.com/2017/10/06/How-to-integrate-Express-js-and-Sequelize-Part-2/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Database/">Database</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node-js/">Node.js</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Tutorial/">Tutorial</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-Dockerize-Google-guetzli" class="article article-type-post" itemscope="" itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/05/16/Dockerize-Google-guetzli/" class="article-date">
   <time datetime="2017-05-16T02:48:36.000Z" itemprop="datePublished">2017-05-16</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Tutorial/">Tutorial</a>►<a class="article-category-link" href="/categories/Tutorial/Docker/">Docker</a>
+  </div>
+
   </div>
   <div class="article-inner">
     
@@ -118,7 +176,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://blog.0x427567.com/2017/05/16/Dockerize-Google-guetzli/" data-id="cj89yxpru00045zsgltp02d5g" class="article-share-link">Share</a>
+      <a data-url="https://blog.0x427567.com/2017/05/16/Dockerize-Google-guetzli/" data-id="cj8fe0qkr00018vsgyl9xk7on" class="article-share-link">Share</a>
       
         <a href="https://blog.0x427567.com/2017/05/16/Dockerize-Google-guetzli/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -139,6 +197,10 @@ ga('send', 'pageview');
   <time datetime="2017-04-13T06:59:41.000Z" itemprop="datePublished">2017-04-13</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Tutorial/">Tutorial</a>►<a class="article-category-link" href="/categories/Tutorial/Linux/">Linux</a>
+  </div>
+
   </div>
   <div class="article-inner">
     
@@ -165,7 +227,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://blog.0x427567.com/2017/04/13/Solve-screen-error-message-Cannot-open-your-terminal-dev-pts-0/" data-id="cj89yxpss000h5zsgt8b8pokd" class="article-share-link">Share</a>
+      <a data-url="https://blog.0x427567.com/2017/04/13/Solve-screen-error-message-Cannot-open-your-terminal-dev-pts-0/" data-id="cj8fe0qmz000h8vsgb1s78ome" class="article-share-link">Share</a>
       
         <a href="https://blog.0x427567.com/2017/04/13/Solve-screen-error-message-Cannot-open-your-terminal-dev-pts-0/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -215,7 +277,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://blog.0x427567.com/2017/04/03/How-to-integrate-Express-js-and-Sequelize-Part-1/" data-id="cj89yxpsh000a5zsgv1qidkdt" class="article-share-link">Share</a>
+      <a data-url="https://blog.0x427567.com/2017/04/03/How-to-integrate-Express-js-and-Sequelize-Part-1/" data-id="cj8fe0qmm000d8vsg2k4yx4q7" class="article-share-link">Share</a>
       
         <a href="https://blog.0x427567.com/2017/04/03/How-to-integrate-Express-js-and-Sequelize-Part-1/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -236,6 +298,10 @@ ga('send', 'pageview');
   <time datetime="2017-03-23T06:54:03.000Z" itemprop="datePublished">2017-03-23</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Tutorial/">Tutorial</a>►<a class="article-category-link" href="/categories/Tutorial/AWS/">AWS</a>
+  </div>
+
   </div>
   <div class="article-inner">
     
@@ -263,61 +329,12 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://blog.0x427567.com/2017/03/23/Sweet-AWS-Lambda-is-support-Node-js-6-10-now/" data-id="cj89yxpsu000k5zsg8kaly31g" class="article-share-link">Share</a>
+      <a data-url="https://blog.0x427567.com/2017/03/23/Sweet-AWS-Lambda-is-support-Node-js-6-10-now/" data-id="cj8fe0qn2000j8vsg0o4k3f28" class="article-share-link">Share</a>
       
         <a href="https://blog.0x427567.com/2017/03/23/Sweet-AWS-Lambda-is-support-Node-js-6-10-now/#disqus_thread" class="article-comment-link">Comments</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AWS/">AWS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Lambda/">Lambda</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node-js/">Node.js</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-A-shell-script-about-MySQL-backup" class="article article-type-post" itemscope="" itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/03/08/A-shell-script-about-MySQL-backup/" class="article-date">
-  <time datetime="2017-03-08T03:11:43.000Z" itemprop="datePublished">2017-03-08</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/08/A-shell-script-about-MySQL-backup/">A shell script about MySQL backup</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Hello, here is a simple shell script, it can help me easy going to backup MySQL, I hope this script can help you all. Below is full script or you can clone from <a href="[https://github.com/ShawnOY/shell-script]" title="[my GitHub]">my GitHub url</a>.</p>
-<h1 id="Features"><a href="#Features" class="headerlink" title="Features"></a>Features</h1><ul>
-<li>Sync to remote server.</li>
-<li>Auto delete older than N days backup file.
-        
-          <p class="article-more-link">
-            <a href="/2017/03/08/A-shell-script-about-MySQL-backup/#more">Read More</a>
-          </p>
-        
-      
-    </li></ul></div>
-    <footer class="article-footer">
-      <a data-url="https://blog.0x427567.com/2017/03/08/A-shell-script-about-MySQL-backup/" data-id="cj89yxprn00015zsg85hvbknq" class="article-share-link">Share</a>
-      
-        <a href="https://blog.0x427567.com/2017/03/08/A-shell-script-about-MySQL-backup/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Database/">Database</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DevOps/">DevOps</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MySQL/">MySQL</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Shell-Script/">Shell Script</a></li></ul>
 
     </footer>
   </div>
@@ -340,7 +357,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Tutorial/">Tutorial</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Tutorial/Networking/">Networking</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tutorial/Node-js/">Node.js</a></li></ul></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Tutorial/">Tutorial</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Tutorial/AWS/">AWS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tutorial/DevOps/">DevOps</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tutorial/Docker/">Docker</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tutorial/JavaScript/">JavaScript</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tutorial/Linux/">Linux</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tutorial/Networking/">Networking</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tutorial/Node-js/">Node.js</a></li></ul></li></ul>
     </div>
   </div>
 
@@ -360,7 +377,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/AWS/" style="font-size: 13.33px;">AWS</a> <a href="/tags/CodeCommit/" style="font-size: 10px;">CodeCommit</a> <a href="/tags/Database/" style="font-size: 13.33px;">Database</a> <a href="/tags/DevOps/" style="font-size: 13.33px;">DevOps</a> <a href="/tags/Docker/" style="font-size: 10px;">Docker</a> <a href="/tags/GitHub/" style="font-size: 10px;">GitHub</a> <a href="/tags/Google/" style="font-size: 10px;">Google</a> <a href="/tags/Hexo/" style="font-size: 13.33px;">Hexo</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Lambda/" style="font-size: 10px;">Lambda</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/MySQL/" style="font-size: 10px;">MySQL</a> <a href="/tags/Nginx/" style="font-size: 10px;">Nginx</a> <a href="/tags/Node-js/" style="font-size: 16.67px;">Node.js</a> <a href="/tags/Shell-Script/" style="font-size: 10px;">Shell Script</a> <a href="/tags/Tutorial/" style="font-size: 20px;">Tutorial</a>
+      <a href="/tags/AWS/" style="font-size: 12.5px;">AWS</a> <a href="/tags/CodeCommit/" style="font-size: 10px;">CodeCommit</a> <a href="/tags/Database/" style="font-size: 15px;">Database</a> <a href="/tags/DevOps/" style="font-size: 12.5px;">DevOps</a> <a href="/tags/Docker/" style="font-size: 10px;">Docker</a> <a href="/tags/GitHub/" style="font-size: 10px;">GitHub</a> <a href="/tags/Google/" style="font-size: 10px;">Google</a> <a href="/tags/Hexo/" style="font-size: 12.5px;">Hexo</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Lambda/" style="font-size: 10px;">Lambda</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/MySQL/" style="font-size: 10px;">MySQL</a> <a href="/tags/Nginx/" style="font-size: 10px;">Nginx</a> <a href="/tags/Node-js/" style="font-size: 17.5px;">Node.js</a> <a href="/tags/Shell-Script/" style="font-size: 10px;">Shell Script</a> <a href="/tags/Tutorial/" style="font-size: 20px;">Tutorial</a>
     </div>
   </div>
 
@@ -369,7 +386,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li></ul>
     </div>
   </div>
 
@@ -380,6 +397,10 @@ ga('send', 'pageview');
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2017/10/06/How-to-integrate-Express-js-and-Sequelize-Part-2/">How to integrate Express.js and Sequelize - Part 2</a>
+          </li>
         
           <li>
             <a href="/2017/05/16/Dockerize-Google-guetzli/">Dockerize Google Guetzli</a>
@@ -395,10 +416,6 @@ ga('send', 'pageview');
         
           <li>
             <a href="/2017/03/23/Sweet-AWS-Lambda-is-support-Node-js-6-10-now/">Sweet!AWS Lambda is support Node.js 6.10 now!</a>
-          </li>
-        
-          <li>
-            <a href="/2017/03/08/A-shell-script-about-MySQL-backup/">A shell script about MySQL backup</a>
           </li>
         
       </ul>
