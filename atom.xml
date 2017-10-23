@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.0x427567.com/"/>
-  <updated>2017-10-06T04:34:58.000Z</updated>
+  <updated>2017-10-23T02:26:44.000Z</updated>
   <id>https://blog.0x427567.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Noranoie 0x00</title>
+    <link href="https://blog.0x427567.com/2017/10/23/Noranoie-0x00/"/>
+    <id>https://blog.0x427567.com/2017/10/23/Noranoie-0x00/</id>
+    <published>2017-10-23T02:26:44.000Z</published>
+    <updated>2017-10-23T02:26:44.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>I decided to write down this project development log, the goal is record issue or others problems in the developing, I must say the data source is chaos, for open data, it have a long time to go in Taiwan.<br><a id="more"></a><br>What is this project? it’s about stray animals project, I gathering data from here <a href="https://data.gov.tw/dataset/9842" rel="external nofollow noopener noreferrer" target="_blank">https://data.gov.tw/dataset/9842</a>, the data is about stray animals, it’s no more euthanasia in Taiwan, the rule of law was start at 2017/02/06, no more animals dies just because it have no owner, it’s cool, but it made shelter over load, more stray animals in the one shelter, more stray animals still waiting a owner, in this time I found someone developed application, but I found some issues too, here has two application about this open data, but all for Android device, not support iOS and browser, well, I have found one website for this open data, but the url is redirect to a pet supplies website, look likes a gimmicky.</p><p>Why named Noranoie(野良の家)? the idea comes from Japanese 海の家(Uminoie), Uminoie provides drink, food and locker room…etc, 野良(Nora) it means stray, so I named this project is Noranoie, I wish make a friendly website, it will support all platform, include mobile device, do not need install any application, anyone can easy to find stray animals.</p><p>That’s all, if you have any question, leave a comment please, thanks!</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;I decided to write down this project development log, the goal is record issue or others problems in the developing, I must say the data source is chaos, for open data, it have a long time to go in Taiwan.&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Development Log" scheme="https://blog.0x427567.com/categories/Development-Log/"/>
+    
+      <category term="Noranoie" scheme="https://blog.0x427567.com/categories/Development-Log/Noranoie/"/>
+    
+    
+      <category term="noranoie" scheme="https://blog.0x427567.com/tags/noranoie/"/>
+    
+      <category term="development log" scheme="https://blog.0x427567.com/tags/development-log/"/>
+    
+  </entry>
   
   <entry>
     <title>How to integrate Express.js and Sequelize - Part 2</title>

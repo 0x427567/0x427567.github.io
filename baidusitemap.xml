@@ -4,6 +4,31 @@
 
     
   <url>
+    <loc>https://blog.0x427567.com/2017/10/23/Noranoie-0x00/</loc>
+    <lastmod>2017-10-23T02:26:44.000Z</lastmod>
+    <data>
+        <display>
+        <title>Noranoie 0x00</title>
+        <pubTime>2017-10-23T02:26:44.000Z</pubTime>
+        
+        <tag>noranoie</tag>
+         
+        <tag>development log</tag>
+         
+         
+           
+             
+              <breadCrumb title="Development Log" url="https://blog.0x427567.com/categories/Development-Log/"/>
+          
+             
+              <breadCrumb title="Noranoie" url="https://blog.0x427567.com/categories/Development-Log/Noranoie/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://blog.0x427567.com/2017/10/06/How-to-integrate-Express-js-and-Sequelize-Part-2/</loc>
     <lastmod>2017-10-06T04:34:58.000Z</lastmod>
     <data>
