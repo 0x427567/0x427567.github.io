@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.0x427567.com/"/>
-  <updated>2017-10-23T02:26:44.000Z</updated>
+  <updated>2017-10-27T07:18:14.000Z</updated>
   <id>https://blog.0x427567.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Recommended Atom packages for JavaScript developer</title>
+    <link href="https://blog.0x427567.com/2017/10/27/Recommended-Atom-packages-for-JavaScript-developer/"/>
+    <id>https://blog.0x427567.com/2017/10/27/Recommended-Atom-packages-for-JavaScript-developer/</id>
+    <published>2017-10-27T07:18:14.000Z</published>
+    <updated>2017-10-27T07:18:14.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="0x00-linter-jshint"><a href="#0x00-linter-jshint" class="headerlink" title="0x00 linter-jshint"></a>0x00 <a href="https://atom.io/packages/linter-jshint" rel="external nofollow noopener noreferrer" target="_blank">linter-jshint</a></h1><p>Provides interface to <a href="http://jshint.com/docs/" rel="external nofollow noopener noreferrer" target="_blank">JSHint</a>, JSHint will flag error before the line, likes syntax error…etc.</p><h1 id="0x01-linter-js-standard"><a href="#0x01-linter-js-standard" class="headerlink" title="0x01 linter-js-standard"></a>0x01 <a href="https://atom.io/packages/linter-js-standard" rel="external nofollow noopener noreferrer" target="_blank">linter-js-standard</a></h1><p>If you are using JavaScript Standard Style, this package can notify you if wrong format is found. By the way, before use this package must install <a href="https://atom.io/packages/linter" rel="external nofollow noopener noreferrer" target="_blank">linter</a>.<br><a id="more"></a></p><h1 id="0x02-standard-formatter"><a href="#0x02-standard-formatter" class="headerlink" title="0x02 standard-formatter"></a>0x02 <a href="https://atom.io/packages/standard-formatter" rel="external nofollow noopener noreferrer" target="_blank">standard-formatter</a></h1><p>This package can help you format your JavaScript to Standard Style, Semi-Standard Style or Happiness Style, you can format by yourself or format on save.</p><h1 id="0x03-standardjs-snippets"><a href="#0x03-standardjs-snippets" class="headerlink" title="0x03 standardjs-snippets"></a>0x03 <a href="https://atom.io/packages/standardjs-snippets" rel="external nofollow noopener noreferrer" target="_blank">standardjs-snippets</a></h1><p>As we know, Atom have JavaScript snippets already, but not for Standard Style, this package provides Standard Style snippets and easy to use.</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;0x00-linter-jshint&quot;&gt;&lt;a href=&quot;#0x00-linter-jshint&quot; class=&quot;headerlink&quot; title=&quot;0x00 linter-jshint&quot;&gt;&lt;/a&gt;0x00 &lt;a href=&quot;https://atom.io/packages/linter-jshint&quot; rel=&quot;external nofollow noopener noreferrer&quot; target=&quot;_blank&quot;&gt;linter-jshint&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;Provides interface to &lt;a href=&quot;http://jshint.com/docs/&quot; rel=&quot;external nofollow noopener noreferrer&quot; target=&quot;_blank&quot;&gt;JSHint&lt;/a&gt;, JSHint will flag error before the line, likes syntax error…etc.&lt;/p&gt;
+&lt;h1 id=&quot;0x01-linter-js-standard&quot;&gt;&lt;a href=&quot;#0x01-linter-js-standard&quot; class=&quot;headerlink&quot; title=&quot;0x01 linter-js-standard&quot;&gt;&lt;/a&gt;0x01 &lt;a href=&quot;https://atom.io/packages/linter-js-standard&quot; rel=&quot;external nofollow noopener noreferrer&quot; target=&quot;_blank&quot;&gt;linter-js-standard&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;If you are using JavaScript Standard Style, this package can notify you if wrong format is found. By the way, before use this package must install &lt;a href=&quot;https://atom.io/packages/linter&quot; rel=&quot;external nofollow noopener noreferrer&quot; target=&quot;_blank&quot;&gt;linter&lt;/a&gt;.&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Development" scheme="https://blog.0x427567.com/categories/Development/"/>
+    
+      <category term="Tool" scheme="https://blog.0x427567.com/categories/Development/Tool/"/>
+    
+    
+      <category term="atom" scheme="https://blog.0x427567.com/tags/atom/"/>
+    
+      <category term="editor" scheme="https://blog.0x427567.com/tags/editor/"/>
+    
+  </entry>
   
   <entry>
     <title>Noranoie 0x00</title>
