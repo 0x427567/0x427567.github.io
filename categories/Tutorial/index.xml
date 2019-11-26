@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tutorial on My New Hugo Site</title>
+    <link>http://example.org/categories/tutorial/</link>
+    <description>Recent content in Tutorial on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 06 Oct 2017 12:25:12 +0000</lastBuildDate>
+    
+	<atom:link href="http://example.org/categories/tutorial/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How to integrate Express.js and Sequelize - Part 2</title>
+      <link>http://example.org/posts/how-to-integrate-express-js-and-sequelize-part-2/</link>
+      <pubDate>Fri, 06 Oct 2017 12:25:12 +0000</pubDate>
+      
+      <guid>http://example.org/posts/how-to-integrate-express-js-and-sequelize-part-2/</guid>
+      <description>&lt;p&gt;This article will continued Part 1, in the part 1 we create two models, in the part 2 we will know how to use model to do CRUD(Create, Read, Update, Delete).&lt;/p&gt;
+
+&lt;p&gt;If you are lost, do not know what is this, you may read &lt;a href=&#34;http://example.org/posts/how-to-integrate-express-js-and-sequelize-part-1/&#34;&gt;part 1&lt;/a&gt; first.&lt;/p&gt;
+
+&lt;h2 id=&#34;0x00&#34;&gt;0x00&lt;/h2&gt;
+
+&lt;p&gt;We need a page to display master information, first edit your index route in the routes directory, it could look likes below.&lt;/p&gt;
+
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;1
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;2
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;3
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;4
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;5
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;6
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;7
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;8
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;express&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;require&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;express&amp;#39;&lt;/span&gt;);
+&lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;router&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;express&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Router&lt;/span&gt;();
+
+&lt;span style=&#34;color:#75715e&#34;&gt;/* GET home page. */&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;router&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;get&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;/&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;req&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;res&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;next&lt;/span&gt;) {
+  &lt;span style=&#34;color:#a6e22e&#34;&gt;res&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;render&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;index&amp;#39;&lt;/span&gt;, { &lt;span style=&#34;color:#a6e22e&#34;&gt;title&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Express&amp;#39;&lt;/span&gt; });
+});
+
+&lt;span style=&#34;color:#a6e22e&#34;&gt;module&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;exports&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;router&lt;/span&gt;;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>How to integrate Express.js and Sequelize - Part 1</title>
+      <link>http://example.org/posts/how-to-integrate-express-js-and-sequelize-part-1/</link>
+      <pubDate>Mon, 03 Apr 2017 13:45:25 +0000</pubDate>
+      
+      <guid>http://example.org/posts/how-to-integrate-express-js-and-sequelize-part-1/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://docs.sequelizejs.com/&#34;&gt;Sequelize&lt;/a&gt; is an ORM for Node.js and it supports many databases such as MySQl, PostgreSQL, MSSQL, MariaDB and SQLite, I will show you how to using Sequelize in the Express. By the way, Sequelize is very different between v3 and v4, this article is focus on v4, for more information you can read &lt;a href=&#34;http://docs.sequelizejs.com/manual/tutorial/upgrade-to-v4.html&#34;&gt;official document&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>How to get response time with curl</title>
+      <link>http://example.org/posts/how-to-get-response-time-with-curl/</link>
+      <pubDate>Fri, 23 Sep 2016 12:10:00 +0000</pubDate>
+      
+      <guid>http://example.org/posts/how-to-get-response-time-with-curl/</guid>
+      <description>&lt;p&gt;curl is a powerful tool help us send request to a website, for example:&lt;/p&gt;
+
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ curl https://blog.0x427567.com/&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Today, I will tech you guys how to get response time with curl, first we need add -w or &amp;ndash;write-out option and we need to know total time, full command likes below:&lt;/p&gt;
+
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ curl -w %&lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;time_total&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt; https://blog.0x427567.com/&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>How to clone AWS CodeCommit repository from EC2 instance</title>
+      <link>http://example.org/posts/how-to-clone-aws-codecommit-repository-from-ec2-instance/</link>
+      <pubDate>Sat, 13 Aug 2016 18:36:36 +0000</pubDate>
+      
+      <guid>http://example.org/posts/how-to-clone-aws-codecommit-repository-from-ec2-instance/</guid>
+      <description>&lt;p&gt;CodeCommit is a git service in AWS, you can own the private repository just a small fee, if you are personal or small group will be not charged any fee in some way.&lt;/p&gt;
+
+&lt;p&gt;Well, I will deploy my application from CodeCommit to EC2, below is my way. First I created a repository in CodeCommit.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&#34;http://example.org/posts/images/How-to-clone-AWS-CodeCommit-repository-from-EC2-instance/Create_Repository_In_AWS_CodeCommit.png&#34;/&gt; 
+&lt;/figure&gt;
+
+
+&lt;p&gt;Before create a new EC2 instance, add a new IAM role.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&#34;http://example.org/posts/images/How-to-clone-AWS-CodeCommit-repository-from-EC2-instance/Create_New_Role_In_IAM.png&#34;/&gt; 
+&lt;/figure&gt;</description>
+    </item>
+    
+    <item>
+      <title>Uptime Robot - Free monitoring your server</title>
+      <link>http://example.org/posts/uptime-robot-free-monitoring-your-server/</link>
+      <pubDate>Fri, 05 Aug 2016 16:10:20 +0000</pubDate>
+      
+      <guid>http://example.org/posts/uptime-robot-free-monitoring-your-server/</guid>
+      <description>&lt;p&gt;Do you need to know your website or server still alive from internet? Uptime Robot will help you to monitoring your server from internet and it is free! For free user, Uptime Robot provide 50 monitors and check it every 5 minutes, you can upgrade your account to pro plan then you can monitoring every 30 seconds.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>How to setting Nginx proxy_pass and forward query parameters</title>
+      <link>http://example.org/posts/how-to-setting-nginx-proxy-pass-and-forward-query-parameters/</link>
+      <pubDate>Fri, 05 Aug 2016 12:21:58 +0000</pubDate>
+      
+      <guid>http://example.org/posts/how-to-setting-nginx-proxy-pass-and-forward-query-parameters/</guid>
+      <description>&lt;p&gt;Let&amp;rsquo;s see basic config of proxy_pass.&lt;/p&gt;
+
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-nginx&#34; data-lang=&#34;nginx&#34;&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 1
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 2
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 3
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 4
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 5
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 6
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 7
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 8
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 9
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;10
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;11
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;12
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-nginx&#34; data-lang=&#34;nginx&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;upstream&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;web&lt;/span&gt; {
+    &lt;span style=&#34;color:#f92672&#34;&gt;server&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;.10.10.10&lt;/span&gt;;
+    &lt;span style=&#34;color:#f92672&#34;&gt;server&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;.10.10.20&lt;/span&gt;;
+}
+
+&lt;span style=&#34;color:#66d9ef&#34;&gt;server{&lt;/span&gt;
+    &lt;span style=&#34;color:#e6db74&#34;&gt;listen&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;80&lt;/span&gt;;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;server_name&lt;/span&gt;
+    &lt;span style=&#34;color:#e6db74&#34;&gt;location&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;/&lt;/span&gt; {
+        &lt;span style=&#34;color:#f92672&#34;&gt;proxy_pass&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;http://web/&lt;/span&gt;;
+    }
+&lt;span style=&#34;color:#66d9ef&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

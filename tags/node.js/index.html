@@ -51,7 +51,7 @@
         <span class="icon is-small">
           <i class="fas fa-puzzle-piece" aria-hidden="true"></i>
         </span>
-        <span>Nginx</span>
+        <span>Node.js</span>
       </a>
     </li>
   </ul>
@@ -60,43 +60,55 @@
   
     <article class="media">
       <div class="media-content">
-        <h2 class="title is-3"><a href="http://example.org/posts/how-to-setting-nginx-proxy-pass-and-forward-query-parameters/">How to setting Nginx proxy_pass and forward query parameters</a></h2>
-        <div class="content is-small"><i class="far fa-calendar-alt"></i> August 5, 2016 <i class="fas fa-book-open"></i> 1 Min</div>
+        <h2 class="title is-3"><a href="http://example.org/posts/how-to-integrate-express-js-and-sequelize-part-2/">How to integrate Express.js and Sequelize - Part 2</a></h2>
+        <div class="content is-small"><i class="far fa-calendar-alt"></i> October 6, 2017 <i class="fas fa-book-open"></i> 3 Min</div>
           <div class="content">
-            <p>Let&rsquo;s see basic config of proxy_pass.</p>
+            <p>This article will continued Part 1, in the part 1 we create two models, in the part 2 we will know how to use model to do CRUD(Create, Read, Update, Delete).</p>
+
+<p>If you are lost, do not know what is this, you may read <a href="http://example.org/posts/how-to-integrate-express-js-and-sequelize-part-1/">part 1</a> first.</p>
+
+<h2 id="0x00">0x00</h2>
+
+<p>We need a page to display master information, first edit your index route in the routes directory, it could look likes below.</p>
 
 <div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nginx" data-lang="nginx"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">9
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nginx" data-lang="nginx"><span style="color:#66d9ef">upstream</span> <span style="color:#e6db74">web</span> {
-    <span style="color:#f92672">server</span> <span style="color:#ae81ff">10</span><span style="color:#e6db74">.10.10.10</span>;
-    <span style="color:#f92672">server</span> <span style="color:#ae81ff">10</span><span style="color:#e6db74">.10.10.20</span>;
-}
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">express</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;express&#39;</span>);
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">router</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">express</span>.<span style="color:#a6e22e">Router</span>();
 
-<span style="color:#66d9ef">server{</span>
-    <span style="color:#e6db74">listen</span> <span style="color:#ae81ff">80</span>;
-    <span style="color:#66d9ef">server_name</span>
-    <span style="color:#e6db74">location</span> <span style="color:#e6db74">/</span> {
-        <span style="color:#f92672">proxy_pass</span> <span style="color:#e6db74">http://web/</span>;
-    }
-<span style="color:#66d9ef">}</span></code></pre></td></tr></table>
+<span style="color:#75715e">/* GET home page. */</span>
+<span style="color:#a6e22e">router</span>.<span style="color:#a6e22e">get</span>(<span style="color:#e6db74">&#39;/&#39;</span>, <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">req</span>, <span style="color:#a6e22e">res</span>, <span style="color:#a6e22e">next</span>) {
+  <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">render</span>(<span style="color:#e6db74">&#39;index&#39;</span>, { <span style="color:#a6e22e">title</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Express&#39;</span> });
+});
+
+<span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">exports</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">router</span>;
+</code></pre></td></tr></table>
 </div>
 </div>
           </div>
-        <div class="has-text-right"><a href="http://example.org/posts/how-to-setting-nginx-proxy-pass-and-forward-query-parameters/">More</a></div>
+        <div class="has-text-right"><a href="http://example.org/posts/how-to-integrate-express-js-and-sequelize-part-2/">More</a></div>
+    </div>
+    </article>
+  
+    <article class="media">
+      <div class="media-content">
+        <h2 class="title is-3"><a href="http://example.org/posts/how-to-integrate-express-js-and-sequelize-part-1/">How to integrate Express.js and Sequelize - Part 1</a></h2>
+        <div class="content is-small"><i class="far fa-calendar-alt"></i> April 3, 2017 <i class="fas fa-book-open"></i> 3 Min</div>
+          <div class="content">
+            <p><a href="http://docs.sequelizejs.com/">Sequelize</a> is an ORM for Node.js and it supports many databases such as MySQl, PostgreSQL, MSSQL, MariaDB and SQLite, I will show you how to using Sequelize in the Express. By the way, Sequelize is very different between v3 and v4, this article is focus on v4, for more information you can read <a href="http://docs.sequelizejs.com/manual/tutorial/upgrade-to-v4.html">official document</a>.</p>
+          </div>
+        <div class="has-text-right"><a href="http://example.org/posts/how-to-integrate-express-js-and-sequelize-part-1/">More</a></div>
     </div>
     </article>
   

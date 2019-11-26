@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on My New Hugo Site</title>
+    <link>http://example.org/categories/</link>
+    <description>Recent content in Categories on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 23 Oct 2017 10:26:44 +0000</lastBuildDate>
+    
+	<atom:link href="http://example.org/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Development Log</title>
+      <link>http://example.org/categories/development-log/</link>
+      <pubDate>Mon, 23 Oct 2017 10:26:44 +0000</pubDate>
+      
+      <guid>http://example.org/categories/development-log/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Noranoie</title>
+      <link>http://example.org/categories/noranoie/</link>
+      <pubDate>Mon, 23 Oct 2017 10:26:44 +0000</pubDate>
+      
+      <guid>http://example.org/categories/noranoie/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Node.js</title>
+      <link>http://example.org/categories/node.js/</link>
+      <pubDate>Fri, 06 Oct 2017 12:25:12 +0000</pubDate>
+      
+      <guid>http://example.org/categories/node.js/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tutorial</title>
+      <link>http://example.org/categories/tutorial/</link>
+      <pubDate>Fri, 06 Oct 2017 12:25:12 +0000</pubDate>
+      
+      <guid>http://example.org/categories/tutorial/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Networking</title>
+      <link>http://example.org/categories/networking/</link>
+      <pubDate>Fri, 23 Sep 2016 12:10:00 +0000</pubDate>
+      
+      <guid>http://example.org/categories/networking/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>AWS</title>
+      <link>http://example.org/categories/aws/</link>
+      <pubDate>Sat, 13 Aug 2016 18:36:36 +0000</pubDate>
+      
+      <guid>http://example.org/categories/aws/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DevOps</title>
+      <link>http://example.org/categories/devops/</link>
+      <pubDate>Fri, 05 Aug 2016 16:10:20 +0000</pubDate>
+      
+      <guid>http://example.org/categories/devops/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
